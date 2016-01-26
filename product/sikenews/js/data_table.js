@@ -12,4 +12,4 @@
 	// $(".tap-i").bind(event_ct(),function(){
 
 	// })
-})(Zepto)
+})(jQuery)

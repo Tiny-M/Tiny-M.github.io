@@ -3,16 +3,20 @@
 	font-family: "microsoft yahei";
 	color: #222;
 	background: #f8f8f8;
+	overflow: hidden;
 }
 .area{
 	padding: 0px 20px;
 	background: #fff;
 }
+.art-content{
+	padding-bottom: 20px;
+}
 .art-content .art-title{
 	font-size: 48px;
     line-height: 48px;
     font-weight: 500;
-    margin-top: 40px;
+    padding-top: 40px;
     letter-spacing: -1px;
 }
 .art-writer{
@@ -40,6 +44,10 @@
 	max-width: 710px;
 	display: inline-block;
 }
+.art-text img.img-jpg{
+	width: 710px;
+	display: inline-block;
+}
 .art-from{
 	font-size: 28px;
 	color: #505050;
@@ -64,6 +72,7 @@
 .writer-info .writer-intro{
 	float: right;
 	width: 595px;
+	position: relative;
 }
 .writer-info .writer-name{
 	font-size: 34px;
@@ -73,14 +82,26 @@
 	content:"";
 	width: 28px;
 	height: 28px;
-	background: url(../images/v_icon.png);
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 16px;
 }
+.writer-info .writer-name.v:after{
+	background: url(../images/v_icon.png);
+}
+.writer-info .writer-name.fb:after{
+	background: url(../images/fb_icon.png);
+}
+.writer-info .writer-name.tt:after{
+	background: url(../images/tt_icon.png);
+}
+.writer-info .writer-name.ins:after{
+	background: url(../images/ins_icon.png);
+}
 .writer-info .writer-iden{
 	font-size: 28px;
 	color: #464646;
+	line-height: 28px;
 }
 .art-share{
 	position: relative;
@@ -162,6 +183,9 @@
 	padding: 30px 20px 0px;
 	border-bottom: 1px solid #e8e8e8;
 }
+.comment-i.on{
+	background: #f0f0f0;
+}
 .comment-i.fade_in{
 	opacity: 0;
 	animation: fade_in 0.7s 0.2s forwards linear;
@@ -198,7 +222,7 @@
 	color: #999;
 }
 .comment-i .dolike{
-	margin-top: 20px;
+	padding: 20px 0px 20px 34px;
 	font-size: 24px;
 	color: #999;
 	height: 30px;
@@ -220,7 +244,7 @@
 	position: absolute;
 	display: block;
 	left: 0px;
-	top: 0px;
+	top: 18px;
 	animation: tobig 0.3s forwards linear;
 	-moz-animation: tobig 0.3s forwards linear;	/* Firefox */
 	-webkit-animation: tobig 0.3s forwards linear;	/* Safari 和 Chrome */
@@ -257,9 +281,10 @@
 	float: right;
 	text-indent: 15px;
 	position: relative;
-	margin-top: 10px;
+	margin-top: 10px;read
 }
-.comment-i .down-icon{
+.comment-i .readmore:after{
+	content: "";
     height: 10px;
     width: 10px;
     display: block;
@@ -287,7 +312,6 @@
 	padding-left: 40px;
 	position: relative;
 	color: #a0a0a0;
-	display: none;
 }	
 .load_ui.ing:before{
 	content: "";
@@ -385,4 +409,210 @@
 {
 0%   {-o-transform: scale(1,1);opacity: 1;}
 100% {-o-transform: scale(2,2);opacity: 0;}
+}
+
+
+
+/*出墙 reset*/
+.outside .writer-name{
+	color: #222;
+}
+.pub-time{
+
+}
+.outside #art-text{
+	color: #464646;
+	font-size: 22px;
+	line-height: 34px;
+	font-family: Courier New;
+}
+.outside .pub-time{
+	font-size: 22px;
+	color: #999;
+	line-height: 50px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.outside .page-bar{
+	padding: 20px 0px;
+}
+.outside .writer-info{
+	margin-top: 0px;
+	padding: 50px 0px;
+}
+.art-img{
+	margin-top: 20px;
+}
+.art-img img{
+	width: 710px;
+}
+.page-bar{
+	height: 30px;
+	margin-top: 20px;
+	font-size: 24px;
+	color: #999;
+	line-height: 30px;
+	position: relative;
+}
+.bar-i{
+	padding-left: 35px;
+	display: inline-block;
+	height: 30px;
+	text-decoration: none;
+	color: #999;
+}
+.bar-i:hover{
+	text-decoration: none;
+}
+.bar-i:active{
+	text-decoration: none;
+}
+.bar-share{
+	background: url(../images/share_icon.png) 0px 3px no-repeat;
+}
+.bar-comment{
+	background: url(../images/comment_icon.png) 0px 1px no-repeat;
+	float: right;
+	margin-right: 20px;
+}
+.bar-like{
+	background: url(../images/like_icon.png) 0px 0px no-repeat;
+	float: right;
+	position: relative;
+}
+.bar-like.on{
+	background: url(../images/like_icon_on.png) 0px 0px no-repeat;
+	color: #e83e2d;
+}
+.bar-like.on:before{
+	content: "";
+	width: 34px;
+	height: 30px;
+	background: url(../images/like_icon_on.png) 0px 0px no-repeat;
+	position: absolute;
+	display: block;
+	left: 0px;
+	top: 0px;
+	animation: tobig 0.3s forwards linear;
+	-moz-animation: tobig 0.3s forwards linear;	/* Firefox */
+	-webkit-animation: tobig 0.3s forwards linear;	/* Safari 和 Chrome */
+	-o-animation: tobig 0.3s forwards linear;	/* Opera */
+}
+.art-more{
+	width: 20px;
+	height: 10px;
+	padding: 15px;
+	margin-left: 650px;
+	position: relative;
+}
+.art-more:after{
+	content: "";
+	height: 10px;
+    width: 10px;
+    display: block;
+    border: 2px solid #999;
+    border-right-width: 0;
+    border-top-width: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.art-more.on:after{
+	transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+	bottom: 8px;
+}
+.art-moretext{
+	margin-top: 30px;
+	display: none;
+	padding: 15px;
+	background: rgb(246,245,244);
+}
+.download-bar{
+	width: 690px;
+	padding: 30px;
+	height: 121px;
+	background: #fff;
+	display: none;
+	background: #f9f9f9;
+}
+.download-bar .sc-logo{
+	float: left;
+}
+.download-bar .logo_icon{
+	width: 121px;
+	height: 121px;
+}
+.download-bar .app-name{
+	font-size: 48px;
+	line-height: 70px;
+}
+.download-bar .app-desc{
+	font-size: 32px;
+	line-height: 40px;
+	color: #666;
+}
+.download-bar .app-intro{
+	width: 320px;
+	padding-left: 20px;
+	float: left;
+}
+.download-bar .dl-btn{
+	width: 170px;
+	height: 56px;
+	background: rgb(254,226,51);
+	float: right;
+	margin-top: 32px;
+	border-radius: 5px;
+	line-height: 56px;
+	text-align: center;
+	font-size: 26px;
+}
+.dl-prompt{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8) url(../images/appname.png) center 70% no-repeat;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+.dl-prompt .intro{
+	width: 300px;
+	font-size: 32px;
+	color: #fff;
+	position: absolute;
+	top: 95px;
+	left: 200px;
+}
+.dl-prompt .intro img{
+	vertical-align: middle;
+	margin:0px 5px;
+}
+.dl-prompt .dl-arrow{
+	position: absolute;
+	right: 50px;
+	top: 20px;
+}
+.client-b{
+	color: rgb(254,226,51);
+}
+
+
+
+
+
+
+
+.video_iframe{
+	border: 1px solid #333;
 }

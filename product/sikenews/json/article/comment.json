@@ -1,57 +1,148 @@
 {
     "ret": 0,
+    "msg": null,
     "data": {
-        "post": 68,
         "comments": [
             {
-                "id": 123,
+                "id": 12,
+                "postId": 113,
+                "userId": 5,
+                "content": "巴萨精神在佩德罗，梅西，普约尔，哈维和伊涅斯塔身上完美的体现了出来",
+                "replyCount": 0,
+                "likeCount": 1,
+                "parentId": 0,
+                "visibleStatus": 1,
+                "time": 1452282764000,
                 "user": {
-                    "nickname": "何为",
-                    "avatar": "images/v_icon.png"
+                    "nickname": "大熊",
+                    "avatar": "",
+                    "city": null,
+                    "about": null,
+                    "gender": 0,
+                    "id": 5,
+                    "omniauthType": "weibo",
+                    "omniauthId": "blabla",
+                    "accessToken": "blabla",
+                    "token": "DF5EA29924D39C3BE8785734F13169C6",
+                    "deviceType": null,
+                    "deviceId": null,
+                    "encryptedPassword": null,
+                    "accountStatus": 0
                 },
-                "content": "哈哈,太好了啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-                "time": "1452241606000",
-                "like": 2,
-                "replyTo": {
-                        "id": 32,
-                        "user": {
-                            "nickname": "小靳",
-                            "avatar": "images/v_icon.png"
-                        },
-                        "content": "领导今天发馒头！！哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-                        "time": "1452241606000",
-                        "like": 5,
-                        "replyTo": {
-                            
-                        }
-                }
+                "replyTo": null
             },
             {
-                "id": 32,
+                "id": 15,
+                "postId": 113,
+                "userId": 1,
+                "content": "我知道你是因为巴萨现在缺少一个强力替补才留下的，你的一切选择都是为了巴萨，所以请你为了自己，等巴萨转会禁令解除时，还是去外面发展吧，为了自己，我们不能再委屈你了。",
+                "replyCount": 0,
+                "likeCount": 13,
+                "parentId": 0,
+                "visibleStatus": 1,
+                "time": 1452282858000,
                 "user": {
-                    "nickname": "小靳",
-                    "avatar": "images/v_icon.png"
+                    "nickname": "小虎",
+                    "avatar": "http://7xpd1v.com2.z0.glb.qiniucdn.com/1_1452310842_1452310858826.jpg",
+                    "city": null,
+                    "about": null,
+                    "gender": 0,
+                    "id": 1,
+                    "omniauthType": "qq",
+                    "omniauthId": "11",
+                    "accessToken": "",
+                    "token": null,
+                    "deviceType": null,
+                    "deviceId": null,
+                    "encryptedPassword": null,
+                    "accountStatus": 0
                 },
-                "content": "领导今天发馒头！！哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
-                "time": "1452241606000",
-                "like": 5,
-                "replyTo": {
-                    
-                }
+                "replyTo": null
             },
             {
-                "id": 433,
+                "id": 35,
+                "postId": 113,
+                "userId": 5,
+                "content": "其实严格上来说，六冠王的前三个，佩德罗还并没有提拔上一队。而他的单赛季六项赛事都有进球，是欧洲超级杯，西班牙超级杯，世俱杯，09-10西甲，09-10欧冠，09-10国王杯这样得来的。",
+                "replyCount": 0,
+                "likeCount": 11,
+                "parentId": 0,
+                "visibleStatus": 1,
+                "time": 1452293133000,
                 "user": {
-                    "nickname": "雷军",
-                    "avatar": "images/v_icon.png"
+                    "nickname": "大熊",
+                    "avatar": "http://7xpd1v.com2.z0.glb.qiniucdn.com/1_1452310907_1452310917969.jpg",
+                    "city": null,
+                    "about": null,
+                    "gender": 0,
+                    "id": 5,
+                    "omniauthType": "weibo",
+                    "omniauthId": "blabla",
+                    "accessToken": "blabla",
+                    "token": "DF5EA29924D39C3BE8785734F13169C6",
+                    "deviceType": null,
+                    "deviceId": null,
+                    "encryptedPassword": null,
+                    "accountStatus": 0
                 },
-                "content": "我靠,真假的",
-                "time": "1452241606001",
-                "like": 1,
+                "replyTo": null
+            },
+            {
+                "id": 37,
+                "postId": 113,
+                "userId": 4,
+                "content": "貌似不算拉玛西亚青训，不过是b队出品，他极为感激巴萨对他的知遇之恩",
+                "replyCount": 0,
+                "likeCount": 0,
+                "parentId": 35,
+                "visibleStatus": 1,
+                "time": 1452293168000,
+                "user": {
+                    "nickname": "小小",
+                    "avatar": "http://7xpd1v.com2.z0.glb.qiniucdn.com/1_1452310887_1452310893247.jpg",
+                    "city": null,
+                    "about": null,
+                    "gender": 0,
+                    "id": 4,
+                    "omniauthType": "wechat",
+                    "omniauthId": "kerberos",
+                    "accessToken": "blabla",
+                    "token": "DF5EA29924D39C3BE8785734F13169C6",
+                    "deviceType": null,
+                    "deviceId": null,
+                    "encryptedPassword": null,
+                    "accountStatus": 0
+                },
                 "replyTo": {
-                        
+                    "id": 35,
+                    "postId": 113,
+                    "userId": 5,
+                    "content": "其实严格上来说，六冠王的前三个，佩德罗还并没有提拔上一队。而他的单赛季六项赛事都有进球，是欧洲超级杯，西班牙超级杯，世俱杯，09-10西甲，09-10欧冠，09-10国王杯这样得来的。",
+                    "replyCount": 0,
+                    "likeCount": 11,
+                    "parentId": 0,
+                    "visibleStatus": 1,
+                    "time": 1452293133000,
+                    "user": {
+                        "nickname": "大熊",
+                        "avatar": "http://7xpd1v.com2.z0.glb.qiniucdn.com/1_1452310907_1452310917969.jpg",
+                        "city": null,
+                        "about": null,
+                        "gender": 0,
+                        "id": 5,
+                        "omniauthType": "weibo",
+                        "omniauthId": "blabla",
+                        "accessToken": "blabla",
+                        "token": "DF5EA29924D39C3BE8785734F13169C6",
+                        "deviceType": null,
+                        "deviceId": null,
+                        "encryptedPassword": null,
+                        "accountStatus": 0
+                    },
+                    "replyTo": null
                 }
             }
-        ]
+        ],
+        "post": 113
     }
 }

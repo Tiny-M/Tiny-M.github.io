@@ -15,7 +15,7 @@
 <!-- head static start -->
 <link rel="stylesheet" href="css/_common.css" />
 <link rel="stylesheet" href="css/data_table.css" />
-<script src="lib/zepto-1.1.6.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/template-3.js" type="text/javascript" charset="utf-8"></script>
 <!-- head static end -->
 
@@ -31,14 +31,267 @@
 
     <div class="page_container">
         <!-- 项目内容 -->
-        <div class="data-table-wrap">
+		<!-- 积分榜 普通 start -->
+			<div class="data-table-wrap">
+				<div class="table">
+					<div class="table-head layout-220-55-40-40-40-80-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd ">球队</span><span class="dd ta_c">积分</span><span class="dd ta_c">进/失</span><span class="dd ta_c">负</span><span class="dd ta_c">中</span><span class="dd ta_c">胜</span><span class="dd ta_c">场次</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-55-40-40-40-80-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		<!-- 积分榜 end -->
 
-			<!-- 红黄牌 start-->
+		<!-- 积分榜 分组 start -->
+			<!-- A组 -->
+			<!-- <div class="data-table-wrap">
+	 			<div class="table">
+					<div class="table-head layout-220-55-40-40-40-80-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd red">A组</span><span class="dd ta_c">积分</span><span class="dd ta_c">进/失</span><span class="dd ta_c">负</span><span class="dd ta_c">中</span><span class="dd ta_c">胜</span><span class="dd ta_c">场次</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-55-40-40-40-80-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+			<!-- B组 -->
+			<!-- <div class="data-table-wrap">
+	 			<div class="table">
+					<div class="table-head layout-220-55-40-40-40-80-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd red">B组</span><span class="dd ta_c">积分</span><span class="dd ta_c">进/失</span><span class="dd ta_c">负</span><span class="dd ta_c">中</span><span class="dd ta_c">胜</span><span class="dd ta_c">场次</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-55-40-40-40-80-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+			<!-- C组 -->
+			<!-- <div class="data-table-wrap">
+	 			<div class="table">
+					<div class="table-head layout-220-55-40-40-40-80-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd red">C组</span><span class="dd ta_c">积分</span><span class="dd ta_c">进/失</span><span class="dd ta_c">负</span><span class="dd ta_c">中</span><span class="dd ta_c">胜</span><span class="dd ta_c">场次</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-55-40-40-40-80-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+			<!-- D组 -->
+			<!-- <div class="data-table-wrap">
+	 			<div class="table">
+					<div class="table-head layout-220-55-40-40-40-80-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd red">D组</span><span class="dd ta_c">积分</span><span class="dd ta_c">进/失</span><span class="dd ta_c">负</span><span class="dd ta_c">中</span><span class="dd ta_c">胜</span><span class="dd ta_c">场次</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-55-40-40-40-80-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">拜仁慕尼黑</span><span class="dd ta_c">99</span><span class="dd ta_c">22/2</span><span class="dd ta_c">12</span><span class="dd ta_c">5</span><span class="dd ta_c">1</span><span class="dd ta_c">12</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+		<!-- 积分榜 end -->
+
+		<!-- 射手榜 start-->
+			<!-- <div class="data-table-wrap">
+	 			<div class="table">
+					<div class="table-head layout-300-180-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球员</span><span class="dd">球队</span><span class="dd ta_c">进球</span>
+						</div>
+					</div>
+					<ul class="table-body layout-300-180-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+		<!-- 射手榜 end -->
+
+		<!-- 助攻（助攻）、越位、犯规 start-->
+			<!-- <div class="data-table-wrap">
+				<nav class="tap-nav clearfix">
+					<div class="tap-i tap-l on">球员</div>
+					<div class="tap-i tap-r">球队</div>
+				</nav>
+	 			<div class="table">
+					<div class="table-head layout-300-180-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球员</span><span class="dd">球队</span><span class="dd ta_c">助攻</span>
+						</div>
+					</div>
+					<ul class="table-body layout-300-180-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+				<div class="table off">
+					<div class="table-head layout-300-55">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球队</span><span class="dd ta_c">助攻</span>
+						</div>
+					</div>
+					<ul class="table-body layout-300-55">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">罗纳尔多蒂尼奥</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">2</span><span class="dd">罗纳尔多蒂尼奥</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+		<!-- 助攻榜（助攻） end -->
+
+		<!-- 控球率 start-->
+			<!-- <div class="data-table-wrap">
+	 			<div class="table">
+					<div class="table-head layout-300-180-100">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球员</span><span class="dd">球队</span><span class="dd ta_c">控球率</span>
+						</div>
+					</div>
+					<ul class="table-body layout-300-180-100">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+
+			</div> -->
+		<!-- 控球率 end -->
+
+		<!-- 点球、补救 start-->
+			<!-- <div class="data-table-wrap">
+				<nav class="tap-nav clearfix">
+					<div class="tap-i tap-l on">球员</div>
+					<div class="tap-i tap-r">球队</div>
+				</nav>
+	 			<div class="table">
+					<div class="table-head layout-300-180-110">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球员</span><span class="dd">球队</span><span class="dd ta_c">啊啊啊啊</span>
+						</div>
+					</div>
+					<ul class="table-body layout-300-180-110">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">布冯</span><span class="dd">尤文图斯</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+				<div class="table off">
+					<div class="table-head layout-300-110">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球队</span><span class="dd ta_c">控球率</span>
+						</div>
+					</div>
+					<ul class="table-body layout-300-110">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">罗纳尔多蒂尼奥</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">2</span><span class="dd">罗纳尔多蒂尼奥</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+		<!-- 点球、补救 end -->
+
+		<!-- 射门、过人、传球、传中、抢断、拦截 start-->
+			<!-- <div class="data-table-wrap">
+				<nav class="tap-nav clearfix">
+					<div class="tap-i tap-l on">球员</div>
+					<div class="tap-i tap-r">球队</div>
+				</nav>
+	 			<div class="table">
+					<div class="table-head layout-220-180-100-100">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球员球员球员</span><span class="dd">球队</span><span class="dd ta_c">控球率率</span><span class="dd ta_c">控球率啊</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-180-100-100">
+						<li class="dl">
+							<span class="dt">1</span><span class="dd">球员球员球员</span><span class="dd">球队</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">2</span><span class="dd">球员球员球员</span><span class="dd">球队</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+				<div class="table off">
+					<div class="table-head layout-220-100-100">
+						<div class="dl">
+							<span class="dt"></span><span class="dd">球队</span><span class="dd ta_c">控球率率</span><span class="dd ta_c">控球率啊</span>
+						</div>
+					</div>
+					<ul class="table-body layout-220-100-100">
+						<li class="dl">
+							<span class="dt">2</span><span class="dd">球员球员球员</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
+						</li>
+						<li class="dl">
+							<span class="dt">2</span><span class="dd">球员球员球员</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
+						</li>
+					</ul>
+				</div>
+			</div> -->
+		<!-- 射门 end -->
+
+
+        <!-- 红黄牌 start-->
+        <!-- <div class="data-table-wrap">
 			<nav class="tap-nav clearfix">
 				<div class="tap-i tap-l on">球员</div>
 				<div class="tap-i tap-r">球队</div>
 			</nav>
-			<div class="table on">
+			<div class="table">
 				<div class="table-head layout-220-140-55-55-55">
 					<div class="dl">
 						<span class="dt"></span><span class="dd ">球员</span><span class="dd ">球队</span><span class="dd ta_c">两黄</span><span class="dd ta_c">黄</span><span class="dd ta_c">红</span>
@@ -53,7 +306,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="table">
+			<div class="table off">
 				<div class="table-head layout-220-55-55-55">
 					<div class="dl">
 						<span class="dt"></span><span class="dd ">球员</span><span class="dd ta_c">两黄</span><span class="dd ta_c">黄</span><span class="dd ta_c">红</span>
@@ -61,16 +314,15 @@
 				</div>
 				<ul class="table-body layout-220-55-55-55">
 					<li class="dl">
-						<span class="dt">1</span><span class="dd">布冯</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
+						<span class="dt top">1</span><span class="dd">布冯</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
 					</li>
 					<li class="dl">
 						<span class="dt">1</span><span class="dd">布冯</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span><span class="dd ta_c">1</span>
 					</li>
 				</ul>
 			</div>
-			<!-- 红黄牌 end -->
-
-        </div>	
+		</div> -->
+		<!-- 红黄牌 end -->
     </div>
 	
 	

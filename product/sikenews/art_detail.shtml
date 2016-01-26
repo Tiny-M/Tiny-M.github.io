@@ -1,0 +1,231 @@
+<!DOCTYPE HTML>
+<!--[if IE 6 ]> <html id="sc_wrap" class="sc_ua_ie6 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 7 ]> <html id="sc_wrap" class="sc_ua_ie7 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 8 ]> <html id="sc_wrap" class="sc_ua_ie8 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 9 ]> <html id="sc_wrap" class="sc_ua_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html id="sc_wrap"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta >
+<title>Score_Temp</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" id="viewport" content="target-densitydpi=device-dpi,width=750,user-scalable=no" />
+
+<!-- head static start -->
+<link rel="stylesheet" href="css/_common.css" />
+<link rel="stylesheet" href="css/art_detail.css" />
+<script src="lib/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/template-3.js" type="text/javascript" charset="utf-8"></script>
+<!-- #include file="b.htm" -->  
+<!-- head static end -->
+
+<!-- init data -->
+<script>
+	var INIT_DATA = {
+		post_like: "1",
+		post_comment: "2",
+		post_id: 2, //文章ID
+		comment_api : 'json/article/comment.json',  //获取评论接口
+		comment_size : 1,  //每页条数
+		like_api : 'json/article/like.json',  //点赞接口
+		init_avatar: "images/avatar.png"
+	}
+	var SHARE_DATA = {
+		title : '标题',   //title （预留）
+		share_image : 'xxx.png', //分享的小图
+		desc : ''  //摘要  （预留）
+	}
+	var DOWNLOAD_DATA = {
+		android_link : "",
+		ios_link : ""
+	}
+</script>
+</head>
+<body>
+<div class="page_wrap" id="page_wrap">
+	<div class="download-bar" id="dl-bar">
+		<div class="sc-logo"><img class="logo_icon" src="images/logo.png"></div>
+		<div class="app-intro">
+			<p class="app-name">肆客体育</p>
+			<p class="app-desc">足球爱好者联盟</p>
+		</div>
+		<div class="dl-btn">立即下载</div>
+	</div>
+
+	<!-- 内容 -->
+    <section class="area art-content">
+        <h1 class="art-title" id="art-title">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</h1>
+		<p class="art-writer">铁杆球迷<time>12-09 17:39</time></p>
+		<div class="art-text" id="art-text">
+			<!-- 富文本内容 start-->
+
+			<p>
+				<iframe class='video_iframe' style='z-index:1;' src='http://v.qq.com/iframe/player.html?vid=m001984xuas&amp;width=710&amp;height=408&amp;auto=0' allowfullscreen='' frameborder='0' height='408' width='710'></iframe>
+				<iframe class='video_iframe' style='z-index:1;' src='http://v.qq.com/iframe/player.html?vid=m001984xuas&amp;width=710&amp;height=408&amp;auto=0' allowfullscreen='' frameborder='0' height='408' width='710'></iframe>
+				<br>
+			</p>
+			
+
+			<!-- 富文本 end -->
+		</div>
+		<p class="art-from">来源:&nbsp;新浪体育</p>
+
+		<!-- 专栏简介 需判断 -->
+		<div class="writer-info clearfix" data-special='{"id":"","name":"","about":"","avatar":""}'>
+			<div class="head-pic"><img src=""></div>
+			<div class="writer-intro">
+				<p class="writer-name">颜强</p>
+				<p class="writer-iden">作家、电视评论员、主持人、资深媒体人</p>
+			</div>
+		</div>
+    </section>
+	
+	<!-- 分享 -->
+	<section class="area art-share mt20 wap-hide">
+		<h2 class="share-t">分享</h2>
+		<ul class="share-list clearfix">
+			<li class="share-i share-pyq" data-type="pyq">朋友圈</li>
+			<li class="share-i share-wx" data-type="wx">微信</li>
+			<li class="share-i share-qq" data-type="qq">QQ</li>
+			<li class="share-i share-qz" data-type="qz">QZone</li>
+			<li class="share-i share-wb" data-type="wb">新浪微博</li>
+		</ul>
+	</section>
+	
+	<span id="anchor-comment"></span>
+	<!-- 评论 -->
+	<section class="area art-comment mt20">
+		<h2 class="comment-t"><span>热门评论</span></h2>
+		<ul class="comment-list clearfix">
+			<li class="comment-i" data-comid="0"><!-- <<<data-comid 评论ID -->
+				<div class="comment-info clearfix">
+					<div class="head-pic">
+						<img src="images/avatar.png">
+					</div>
+					<div class="user-info">
+						<p class="user-name">小罗</p>
+						<time data-time="1452241606000">12-08 21:37</time>
+					</div>
+					<div class="dolike">
+						20
+					</div>
+				</div>
+				<div class="comment-content">
+					<!-- 是否为回复评论  需判断是否存在 -->
+					回复<span class="c-user">@阮绵绵：</span>
+					<!-- 评论内容 超过80字 截取72字加上"..."-->
+					<span class="c-content">评论评论评论评论评论评论评论评...</span>
+					<!-- 超过80字显示以下标签 -->
+					<br/>
+					<span class="readmore" data-all="85字">
+						显示全部
+					</span>
+				</div>
+				<!-- 原回复  需判断是否存在 -->
+				<div class="comment-replyto">
+					<span class="c-user">@阮绵绵：</span>原评论原评论原评论
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 最新评论 VM规则同上--> 
+	<section class="area art-comment mt20" id="new-comment">
+		<h2 class="comment-t"><span>最新评论</span></h2>
+		<ul class="comment-list clearfix">
+			<li id="comment-start"></li>
+			<li class="comment-i" data-comid="0"><!-- <<<data-comid 评论ID -->
+				<div class="comment-info clearfix">
+					<div class="head-pic">
+						<img src="images/v_icon.png">
+					</div>
+					<div class="user-info">
+						<p class="user-name">小罗</p>
+						<time data-time="1452241606000">12-08 21:37</time>
+					</div>
+					<div class="dolike">
+						20
+					</div>
+				</div>
+				<div class="comment-content">
+					<!-- 是否为回复评论  需判断是否存在 -->
+					回复<span class="c-user">@阮绵绵：</span>
+					<!-- 评论内容 超过80字 截取72字加上"..."-->
+					<span class="c-content">评论评论评论评论评论评论评论评...</span>
+					<!-- 超过80字显示以下标签 -->
+					<br/>
+					<span class="readmore" data-all="85字">
+						显示全部
+					</span>
+				</div>
+				<!-- 原回复  需判断是否存在 -->
+				<div class="comment-replyto">
+					<span class="c-user">@阮绵绵：</span>原评论原评论原评论
+				</div>
+			</li>
+			<li id="comment-end"></li>
+			<li class="load_ui ing" id="c_load">
+				加载更多
+			</li>
+		</ul>
+	</section>
+	
+
+
+
+<!-- 评论 JS模板 -->
+<script id="temp-comment" type="text/html">
+	{{each data as value}}
+	<li class="comment-i fade_in" data-comid="{{value.id}}">
+		<div class="comment-info clearfix">
+			<div class="head-pic">
+				<img src="{{value.avatar}}">
+			</div>
+			<div class="user-info">
+				<p class="user-name">{{value.nickname}}</p>
+				<time>{{value.time}}</time>
+			</div>
+			<div class="dolike">
+				{{value.like}}
+			</div>
+		</div>
+		<div class="comment-content">
+			{{if value.r_nickname}}
+			回复<span class="c-user">@{{value.r_nickname}}：</span><span class="c-content">{{value.s_content}}</span>
+			{{else}}
+			<span class="c-content">{{value.s_content}}</span>
+			{{/if}}
+			<br/>
+			{{if value.l_content}}
+			<span class="readmore" data-all="{{value.l_content}}">
+						显示全部<span class="down-icon"></span>
+			</span>
+			{{/if}}
+		</div>
+		{{if value.r_nickname}}
+		<div class="comment-replyto">
+			<span class="c-user">@{{value.r_nickname}}：</span>{{value.r_content}}
+		</div>
+		{{/if}}
+	</li>
+	{{/each}}
+</script>
+
+
+</div>		
+
+
+<div class="dl-prompt">
+	<p class="intro">链接打不开？<br/>请点击右上角 “<img src="images/dl-dotted.png">”<br/>选择<span class="client-b">“在Safari中打开”</span></p>
+	<img src="images/dl-arrow.png" class="dl-arrow">
+</div>
+
+
+<!-- foot -->
+<!-- commonjs-->
+<script src="js/_common.js" type="text/javascript" charset="utf-8"></script>
+<!-- pagejs -->
+<script src="js/art_detail.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
