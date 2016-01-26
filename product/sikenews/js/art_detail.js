@@ -385,9 +385,13 @@
 	}
 	// 分享初始化接口
 	function shareInit_interface(){
+		alert("进入shareInit_interface()")
 		if(isSC()){
+			alert("进入isSC()")
 			if(isIOS()){
+				alert("进入isIOS()")
 				window.webkit.messageHandlers.onArticleInit.postMessage(share_data("all"))
+				alert(share_data("all"))
 			}else{
 				window.score.onArticleInit(share_data("all"))
 			}
