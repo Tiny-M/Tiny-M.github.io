@@ -129,9 +129,9 @@ $(".tshare").bind("click",function(){
 // 微信分享
 ;(function(){
 	var url=location.href,/*分享的地址*/
-		image=SHARE_DATA.share_image,
-		desc=getDesc(),//分享描述
-		title=SHARE_DATA.title==""?$("#art-title").html():SHARE_DATA.title;/*分享标题*/;
+		image="",
+		desc="我打败了宋鑫",//分享描述
+		title="我真棒系列";
 	
 	if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
 		init();
