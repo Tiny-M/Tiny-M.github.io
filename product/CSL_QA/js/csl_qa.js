@@ -101,23 +101,24 @@ $(".loc2").bind("click",function(){
 
 // 重玩
 $(".replay").bind("click",function(){
-	save_data = {
-		data:{
-			group : null,
-			answer : [],
-			result : [],
-			c_sum : 0,
-			area : "",
-			isLoc : false,
-		}
-	}
-	$(".color_f").removeClass("color_f");
-	$(".color_t").removeClass("color_t");
-	$(".color_w").removeClass("color_w");
-	$(".share-alert").removeClass("on")
-	setTimeout(function(){
-		slider.slideTo(1)
-	},500)
+	location.reload();
+	// save_data = {
+	// 	data:{
+	// 		group : null,
+	// 		answer : [],
+	// 		result : [],
+	// 		c_sum : 0,
+	// 		area : "",
+	// 		isLoc : false,
+	// 	}
+	// }
+	// $(".color_f").removeClass("color_f");
+	// $(".color_t").removeClass("color_t");
+	// $(".color_w").removeClass("color_w");
+	// $(".share-alert").removeClass("on")
+	// setTimeout(function(){
+	// 	slider.slideTo(1)
+	// },500)
 	
 })
 
@@ -126,50 +127,16 @@ $(".replay").bind("click",function(){
 $(".tshare").bind("click",function(){
 	$(".share-alert").addClass("on")
 })
+
 // 微信分享
-;(function(){
-	var url=location.href,/*分享的地址*/
-		image="",
-		desc="我打败了宋鑫",//分享描述
-		title="我真棒系列";
-	
-	if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-		init();
-	} else {
-		if (document.addEventListener) {
-			document.addEventListener("WeixinJSBridgeReady", init, false);
-		} else if (document.attachEvent) {
-			document.attachEvent("WeixinJSBridgeReady", init);
-			document.attachEvent("onWeixinJSBridgeReady", init);
-		}
-	}
-	function init(){
-		WeixinJSBridge.on("menu:share:appmessage", shareToFriend);// 监听事件 - 发给朋友
-		WeixinJSBridge.on("menu:share:timeline", shareToFriends);// 监听事件 - 朋友圈
-	}
-	function shareToFriend(){
-		WeixinJSBridge.invoke("sendAppMessage", {// 发消息给朋友，当然，也可以通过其它方式主动触发
-			appid: "wx06e3073fd4d17e3b",
-			img_url:image,
-			img_width: "80",
-			img_height: "80",
-			link: url,
-			desc: desc,
-			title: title
-		}, function (res) {
-			//alert(res.err_msg);
-		});
-	}
-	function shareToFriends(){
-		WeixinJSBridge.invoke("shareTimeline", {
-			img_url:image,
-			img_width: "80",
-			img_height: "80",
-			link: url,
-			desc: desc, //不显示，但是还是要传
-			title: desc
-		}, function (res) {
-			//alert(res.err_msg);
-		});
-	}
-}());
+// 微信分享
+var wx_shareData = {
+	title: 'hahahaha', // 分享标题
+    desc: 'gungungun', // 分享描述
+    link: location.href, // 分享链接
+    imgUrl: '', // 分享图标
+    type: '', // 分享类型,music、video或link，不填默认为link
+    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+}
+wx.onMenuShareTimeline(wx_shareData);
+wx.onMenuShareAppMessage(wx_shareData);
