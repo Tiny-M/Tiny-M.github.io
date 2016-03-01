@@ -46,9 +46,15 @@
 			viewport.content = "width=" + window.innerWidth;
 			document.documentElement.style.zoom = window.innerWidth/640;
 	}*/
-	var viewport = document.getElementById('viewport');
-	viewport.content = "width=" + window.innerWidth;
-	document.documentElement.style.zoom = window.innerWidth/750;
+	if(window.innerWidth < 750){
+		var viewport = document.getElementById('viewport');
+		viewport.content = "width=" + window.innerWidth+"target-densitydpi=device-dpi,user-scalable=no";
+		zoom = window.innerWidth/750;
+		document.documentElement.style.zoom = zoom;
+		
+		
+		window.AdaptFunc&&window.AdaptFunc(zoom)
+	}
 	// if(window.innerWidth < 750){
 	// 	// if(window.devicePixelRatio == 1.5){
 	// 	// 	document.documentElement.style.zoom = 0.75;
@@ -60,7 +66,7 @@
 	// 		// document.documentElement.style.zoom = 1;
 	// 	// }
 	// }
-}
+	}
 
 	/*
 	* click、touchstart 事件判断

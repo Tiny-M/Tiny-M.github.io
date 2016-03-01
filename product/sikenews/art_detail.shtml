@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<!--[if IE 6 ]> <html id="sc_wrap" class="sc_ua_ie6 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 7 ]> <html id="sc_wrap" class="sc_ua_ie7 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 8 ]> <html id="sc_wrap" class="sc_ua_ie8 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 9 ]> <html id="sc_wrap" class="sc_ua_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html id="sc_wrap"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta >
+<title>Score_Temp</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" id="viewport" content="target-densitydpi=device-dpi,width=750,user-scalable=no" />
+
+<!-- head static start -->
+<link rel="stylesheet" href="css/_common.css" />
+<link rel="stylesheet" href="css/art_detail.css" />
+<script src="lib/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- head static end -->
+
+<!-- init data -->
+<script>
+	var INIT_DATA = {
+		post_like: "1",
+		post_comment: "2",
+		post_id: 2, //文章ID
+		comment_api : 'json/article/comment.json',  //获取评论接口
+		comment_size : 1,  //每页条数
+		like_api : 'json/article/like.json',  //点赞接口
+		init_avatar: "images/avatar.png"
+	}
+	var SHARE_DATA = {
+		title : '标题',   //title （预留）
+		share_image : 'xxx.png', //分享的小图
+		desc : ''  //摘要  （预留）
+	}
+	var DOWNLOAD_DATA = {
+		android_link : "",
+		ios_link : ""
+	}
+</script>
+</head>
+<body id="body">
+<div class="page_wrap" id="page_wrap">
+	<div class="download-bar" id="dl-bar">
+		<div class="sc-logo"><img class="logo_icon" src="images/logo.png"></div>
+		<div class="app-intro">
+			<p class="app-name">肆客体育</p>
+			<p class="app-desc">足球爱好者联盟</p>
+		</div>
+		<div class="dl-btn">立即下载</div>
+	</div>
+
+	<!-- 内容 -->
+    <section class="area art-content">
+        <h1 class="art-title" id="art-title">啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</h1>
+		<p class="art-writer">铁杆球迷<time>12-09 17:39</time></p>
+		<div class="art-text" id="art-text">
+            <!-- 富文本内容 start-->
+            <p></p><div style="text-align: center;"><span style="line-height: 1.42857143;"><b>肆客日报&nbsp;</b></span></div><div style="text-align: center;"><span style="line-height: 1.42857143;">精选过去24小时最具价值的足球资讯、最有才的网友评论。&nbsp;</span></div>
+<br><b>一、西甲榜首大战，巴萨2-1逆转9人马竞
+</b><br><span style="line-height: 1.42857143;"><br></span><p></p><p><span style="line-height: 1.42857143;">昨天晚上，西甲榜首大战在诺坎普进行，由巴塞罗那主场迎战马德里竞技。上半场，科克禁区内垫射破门首开纪录，梅西禁区内脚弓推射入网扳平比分，苏亚雷斯禁区内小角度破门逆转比分。而费利佩在上半场快结束的时候蹬踏梅西被直接红牌罚下。下半场易边再战，戈丁因阻止苏亚雷斯前进被判罚第二张黄牌。最终，巴塞罗那主场2-1战胜马德里竞技。独占西甲积分榜榜首。&nbsp;</span><br></p><p><span class="sc-imgctl gif-wrap"><img class="img-gif" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239218345.gif?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239218345.gif?imageView2/3/w/710"></span><br>
+<br>神评论
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b style="line-height: 1.42857143;">L-sunny</b><span style="line-height: 1.42857143;">&nbsp;</span></blockquote><p><span style="line-height: 1.42857143;">一图诠释巴萨队内地位&nbsp;</span><br></p><p></p><p>
+<img class="img-jpg lazy" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239234714.png?imageView2/3/w/710"><br>
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>zihong
+</b></blockquote>苏亚雷斯：戈丁你国家队别来了。 
+<br>内马尔：菲利佩你国家队别来了。 
+<br>小白：加比你国家队别来了。 
+<br>梅西：西蒙尼你还是去国家队吧....<br>
+<br><b>二、小将帽子戏法，曼城4-0维拉晋级
+</b><br><span style="line-height: 1.42857143;"><br></span><p></p><p><span style="line-height: 1.42857143;">昨天晚上，曼城远赴维拉公园球场挑战自己的足总杯第四轮对手阿斯顿维拉。小将伊赫纳乔表现出色，在比赛中上演帽子戏法，此后斯特林锦上添花抢点破门。曼城客场4-0轻取维拉，闯入下一轮。&nbsp;</span></p><p>
+<span class="sc-imgctl gif-wrap"><img class="img-gif" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239218345.gif?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239269368.gif?imageView2/3/w/710"></span><br><br></p><p>神评论
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>泽天
+</b></blockquote>小将纷纷首秀，太子戴帽，斯特林破球荒，球队晋级。不能更好了
+<br>
+<br><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>jslke
+</b></blockquote><p><span style="line-height: 1.42857143;">伊赫纳乔和马夏尔会是梅罗一样的一生之敌么？&nbsp;</span><br></p><p></p><p><br><b>三、利物浦0-0西汉姆，双方择日重赛
+</b><br><br></p><p>1月31日凌晨01:30，足总杯第四轮一场焦点战在安菲尔德球场展开，利物浦0-0战平西汉姆联。上半场比赛节奏很快，但双方失误都很多，没能取得进球。下半场，西汉姆联门将兰多夫做出数次精彩扑救，利物浦虽然占据主动却未能破门。最终，利物浦0-0战平西汉姆联，双方将在厄普顿公园球场进行重赛。
+<br>
+<span class="sc-imgctl gif-wrap"><img class="img-gif" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239218345.gif?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239304997.gif?imageView2/3/w/710"></span><br><br></p><p>神评论
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>d8j2005
+</b></blockquote>今年最渣的一场菜鸡互啄。
+<br>
+<br><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>为爱而岸
+</b></blockquote>詹俊都放弃黑本特克了……
+<br>
+<br><b>四、大腿进球，阿森纳2-1伯恩利晋级
+</b><br><br><p></p><p>昨天晚上，英格兰足总杯第4轮的一场比赛在酋长球场拉开了战幕，上半场钱伯斯外脚背抽射建功为阿森纳取得领先，沃克斯头球破门扳平了比分；下半场桑切斯的进球帮助阿森纳主场力克对手。最终主场作战的阿森纳2-1战胜伯恩利晋级下一轮。
+<br>
+<span class="sc-imgctl gif-wrap"><img class="img-gif" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239218345.gif?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239381622.gif?imageView2/3/w/710"></span></p><p><br>神评论
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><span style="line-height: 1.42857143;"><b>忧伤的太子</b>&nbsp;</span></blockquote><p><span style="line-height: 1.42857143;">虽然有个神配合，但是沃尔科特这射门技术在向本特克看齐啊&nbsp;</span><br></p><p></p><p>
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>never or not
+</b></blockquote>最后半分钟还是要救心丸...
+<br><b><br></b><p></p><p><b>五、国足主帅报名截止，足协将进行选聘
+</b><br><br></p><p>1月30日下午，中国足协官方网发布公告称男足国家队主教练选聘报名截止，接下来足协也将进入对报名者选聘的工作阶段。
+<br>
+<img class="img-jpg lazy" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239444394.jpg?imageView2/3/w/710"></p><p><br>在这份关于国足选帅的公告中，足协表示：“中国足协共收到来自中国和欧洲、南美、北美的18个国家共45名教练员的报名材料。足协将立即汇总所有报名教练员信息，由选聘专家组提出遴选意见并在面谈面试的基础上，提出推荐意见提交中国足协确定。”&nbsp;</p><p><br></p><p>神评论
+<br></p><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>lineker</b>
+</blockquote>煞有介事地海选——选个出人意料的冷门——友谊赛或次要比赛出彩——世界杯翻船——煞有介事地再海选
+<br>
+<br><blockquote style="display:block; border-left: 5px solid #d0e5f2; padding:0 0 0 10px; margin:0; line-height:1.4; font-size: 100%;"><b>黄三炮</b>
+</blockquote><p><span style="line-height: 1.42857143;">明天马上去足协大楼门口贴笔试培训班招生广告</span><br></p><p></p><p><img class="img-jpg lazy" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239526150.png?imageView2/3/w/710"><br></p><p>
+<br></p><div style="text-align: center;"><span style="line-height: 1.42857143;"><b>你知道吗</b>&nbsp;</span></div><div style="text-align: center;"><span style="line-height: 1.42857143;">科贝尔胜小威，生涯首夺大满贯&nbsp;</span></div><div style="text-align: center;"><img class="img-jpg lazy" data-original="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png?imageView2/3/w/710" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png?imageView2/3/w/710"><span style="line-height: 1.42857143;"><br></span></div>
+<br>2016年澳大利亚网球公开赛的女单冠军已经产生。头号种子小威廉姆斯与7号种子科贝尔展开三盘鏖战，德国姑娘虽然浪费发球胜赛局，但还是以总比分2-1力克卫冕冠军，生涯首夺大满贯冠军，成为继格拉芙之后，公开赛时代第二位捧起大满贯的德国球员。凭借此次夺冠，科贝尔的世界排名也将升至第二位。
+<br>
+<br><div style="text-align: center;"><b style="line-height: 1.42857143;">一起玩！</b></div>今日竞猜：他和某著名城市同名，接过了豪门的传奇球衣，在场上的他曾想向前辈致敬却惨遭失败。
+<br><p></p>
+            <!-- 富文本 end -->
+        </div>
+		<p class="art-from">来源:&nbsp;新浪体育</p>
+
+		<!-- 专栏简介 需判断 -->
+		<div class="writer-info clearfix" data-special='{"id":"","name":"","about":"","avatar":""}'>
+			<div class="head-pic"><img src=""></div>
+			<div class="writer-intro">
+				<p class="writer-name">颜强</p>
+				<p class="writer-iden">作家、电视评论员、主持人、资深媒体人</p>
+			</div>
+		</div>
+    </section>
+	
+	<!-- 分享 -->
+	<section class="area art-share mt20 wap-hide">
+		<h2 class="share-t">分享</h2>
+		<ul class="share-list clearfix">
+			<li class="share-i share-pyq" data-type="pyq">朋友圈</li>
+			<li class="share-i share-wx" data-type="wx">微信</li>
+			<li class="share-i share-qq" data-type="qq">QQ</li>
+			<li class="share-i share-qz" data-type="qz">QZone</li>
+			<li class="share-i share-wb" data-type="wb">新浪微博</li>
+		</ul>
+	</section>
+	
+	<span id="anchor-comment"></span>
+	<!-- 评论 -->
+	<section class="area art-comment mt20">
+		<h2 class="comment-t"><span>热门评论</span></h2>
+		<ul class="comment-list clearfix">
+			<li class="comment-i" data-comid="0"><!-- <<<data-comid 评论ID -->
+				<div class="comment-info clearfix">
+					<div class="head-pic">
+						<img src="images/avatar.png">
+					</div>
+					<div class="user-info">
+						<p class="user-name">小罗</p>
+						<time data-time="1452241606000">12-08 21:37</time>
+					</div>
+					<div class="dolike">
+						20
+					</div>
+				</div>
+				<div class="comment-content">
+					<!-- 是否为回复评论  需判断是否存在 -->
+					回复<span class="c-user">@阮绵绵：</span>
+					<!-- 评论内容 超过80字 截取72字加上"..."-->
+					<span class="c-content">&#128145;&#128145;&#128145;评论评论评论评论评论评论评论评...</span>
+					<!-- 超过80字显示以下标签 -->
+					<br/>
+					<span class="readmore" data-all="85字">
+						显示全部
+					</span>
+				</div>
+				<!-- 原回复  需判断是否存在 -->
+				<div class="comment-replyto">
+					<span class="c-user">@阮绵绵：</span>原评论原评论原评论
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 最新评论 VM规则同上--> 
+	<section class="area art-comment mt20" id="new-comment">
+		<h2 class="comment-t"><span>最新评论</span></h2>
+		<ul class="comment-list clearfix">
+			<li id="comment-start"></li>
+			<li class="comment-i" data-comid="133"><!-- <<<data-comid 评论ID -->
+				<div class="comment-info clearfix">
+					<div class="head-pic">
+						<img src="images/v_icon.png">
+					</div>
+					<div class="user-info">
+						<p class="user-name">小罗</p>
+						<time data-time="1452241606000">12-08 21:37</time>
+					</div>
+					<div class="dolike">
+						20
+					</div>
+				</div>
+				<div class="comment-content">
+					<!-- 是否为回复评论  需判断是否存在 -->
+					回复<span class="c-user">@阮绵绵：</span>
+					<!-- 评论内容 超过80字 截取72字加上"..."-->
+					<span class="c-content">评论评论评论评论评论评论评论评...</span>
+					<!-- 超过80字显示以下标签 -->
+					<br/>
+					<span class="readmore" data-all="85字">
+						显示全部
+					</span>
+				</div>
+				<!-- 原回复  需判断是否存在 -->
+				<div class="comment-replyto">
+					<span class="c-user">@阮绵绵：</span>原评论原评论原评论
+				</div>
+			</li>
+			<li id="comment-end"></li>
+			<li class="load_ui ing" id="c_load">
+				加载更多
+			</li>
+		</ul>
+	</section>
+	
+
+
+
+<!-- 评论 JS模板 -->
+<script id="temp-comment" type="text/html">-
+	{{each data as value}}
+	{{if value.visible != 3}}
+	<li class="comment-i fade_in" data-comid="{{value.id}}">
+		<div class="comment-info clearfix">
+			<div class="head-pic">
+				<img src="{{value.avatar}}">
+			</div>
+			<div class="user-info">
+				<p class="user-name">{{value.nickname}}</p>
+				<time>{{value.time}}</time>
+			</div>
+			
+			{{if value.visible != 2}}
+			<div class="dolike {{value.islike}}">
+					{{value.like}}
+			</div>
+			{{/if}}
+		</div>
+		{{if value.visible == 1}}
+			<div class="comment-content">
+				{{if value.r_nickname}}
+				回复<span class="c-user">@{{value.r_nickname}}：</span><span class="c-content">{{value.s_content}}</span>
+				{{else}}
+				<span class="c-content">{{value.s_content}}</span>
+				{{/if}}
+				<br/>
+				{{if value.l_content}}
+				<span class="readmore" data-all="{{value.l_content}}">
+							显示全部<span class="down-icon"></span>
+				</span>
+				{{/if}}
+			</div>
+			{{if value.r_nickname}}
+			<div class="comment-replyto">
+				<span class="c-user">@{{value.r_nickname}}：</span>{{if value.r_visible!=1}}评论已被删除{{else}}{{value.r_content}}{{/if}}
+			</div>
+			{{/if}}
+		{{else}}
+			<div class="comment-content">
+				<span class="c-content ondel">评论已被管理员删除</span>
+			</div>
+		{{/if}}
+	</li>
+	{{/if}}
+	{{/each}}
+</script>
+
+
+
+</div>		
+
+
+<div class="dl-prompt">
+	<p class="intro">链接打不开？<br/>请点击右上角 “<img src="images/dl-dotted.png">”<br/>选择<span class="client-b">“在Safari中打开”</span></p>
+	<img src="images/dl-arrow.png" class="dl-arrow">
+</div>
+
+
+<!-- foot -->
+<!-- commonjs-->
+<script src="js/_common.js" type="text/javascript" charset="utf-8"></script>
+<!-- pagejs -->
+<script src="lib/template-3.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/jquery.lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/art_detail.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

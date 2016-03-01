@@ -35,8 +35,58 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
 .mt20{margin-top: 20px;}
 .page_wrap{
 	width: 710px;
+    font-family: "microsoft yahei";
 	font-size: 38px;
 	line-height: 60px;
 	color: #464646;
+
 	padding: 0px 20px;
+}
+.art-content{
+    padding-bottom: 30px;
+}
+.art-content .art-title{
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 500;
+    padding-top: 28px;
+    letter-spacing: -1px;
+}
+.art-writer{
+    font-size: 26px;
+    color: #505050;
+    line-height: 26px;
+    margin: 36px 0;
+    font-family: avril;
+}
+.art-writer time{
+    padding-left: 20px;
+}
+.art-pic{
+    display: block;
+    width: 710px;
+    height: 400px;
+    margin-bottom: 40px;
+}
+.art-text{
+    font-size: 38px;
+    line-height: 60px;
+    color: #464646;
+}
+.art-text img{
+    max-width: 710px;
+    display: inline-block;
+}
+.art-text img.img-jpg{
+    width: 710px;
+    display: inline-block;
+}
+.art-text img.img-gif{
+    width: 710px;
+    display: inline-block;
+}
+.art-from{
+    font-size: 28px;
+    color: #505050;
+    margin-top: 50px;
 }

@@ -10,13 +10,13 @@
 	background: #fff;
 }
 .art-content{
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 }
 .art-content .art-title{
 	font-size: 48px;
-    line-height: 48px;
+    line-height: 72px;
     font-weight: 500;
-    padding-top: 40px;
+    padding-top: 28px;
     letter-spacing: -1px;
 }
 .art-writer{
@@ -39,12 +39,17 @@
 	font-size: 38px;
 	line-height: 60px;
 	color: #464646;
+	text-align: justify;
 }
 .art-text img{
 	max-width: 710px;
 	display: inline-block;
 }
 .art-text img.img-jpg{
+	width: 710px;
+	display: inline-block;
+}
+.art-text img.img-gif{
 	width: 710px;
 	display: inline-block;
 }
@@ -56,6 +61,8 @@
 .writer-info{
 	margin-top: 50px;
 	padding-bottom: 30px;
+	padding-top: 30px;
+    border-top: 1px solid #d8d8d8;
 }
 .writer-info .head-pic{
 	width: 80px;
@@ -85,6 +92,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 16px;
+	margin-bottom: 5px;
 }
 .writer-info .writer-name.v:after{
 	background: url(../images/v_icon.png);
@@ -131,33 +139,34 @@
 	font-weight: 300;
 }
 .share-list{
-	height: 230px;
+	height: 150px;
 	margin: 0px -20px;
+	padding: 40px 0;
 }
 .share-list .share-i{
-	height: 95px;
+	height: 55px;
 	float: left;
 	width: 110px;
 	margin: 0px 20px;
-	padding-top: 135px;
+	padding-top: 95px;
 	text-align: center;
 	font-size: 24px;
 	line-height: 68px;
 }
 .share-list .share-pyq{
-	background: url(../images/share_pyq.png) center 50px no-repeat;
+	background: url(../images/share_pyq.png) center 10px no-repeat;
 }
 .share-list .share-wx{
-	background: url(../images/share_wx.png) center 50px no-repeat;
+	background: url(../images/share_wx.png) center 10px no-repeat;
 }
 .share-list .share-qq{
-	background: url(../images/share_qq.png) center 50px no-repeat;
+	background: url(../images/share_qq.png) center 10px no-repeat;
 }
 .share-list .share-qz{
-	background: url(../images/share_qz.png) center 50px no-repeat;
+	background: url(../images/share_qz.png) center 10px no-repeat;
 }
 .share-list .share-wb{
-	background: url(../images/share_wb.png) center 50px no-repeat;
+	background: url(../images/share_wb.png) center 10px no-repeat;
 }
 
 .art-comment{
@@ -216,6 +225,8 @@
 .comment-i .user-name{
 	font-size: 28px;
 	color: #306599;
+	height: 42px;
+    overflow: hidden;
 }
 .comment-i time{
 	font-size: 20px;
@@ -227,13 +238,13 @@
 	color: #999;
 	height: 30px;
 	line-height: 35px;
-	padding-left: 34px;
+	padding-left: 64px;
 	float: right;
-	background: url(../images/like_icon.png) 0px center no-repeat;
+	background: url(../images/like_icon.png) 30px center no-repeat;
 	position: relative;
 }
 .comment-i .dolike.on{
-	background: url(../images/like_icon_on.png) 0px center no-repeat;
+	background: url(../images/like_icon_on.png) 30px center no-repeat;
 	color: #e83e2d;
 }
 .comment-i .dolike.on:before{
@@ -243,7 +254,7 @@
 	background: url(../images/like_icon_on.png) 0px center no-repeat;
 	position: absolute;
 	display: block;
-	left: 0px;
+	left: 30px;
 	top: 18px;
 	animation: tobig 0.3s forwards linear;
 	-moz-animation: tobig 0.3s forwards linear;	/* Firefox */
@@ -251,9 +262,12 @@
 	-o-animation: tobig 0.3s forwards linear;	/* Opera */
 }
 .comment-i .comment-content{
-	padding: 40px 0px 30px 70px;
+	padding: 20px 0px 30px 70px;
 	font-size: 32px;
 	overflow: hidden;
+}
+.comment-i .comment-content .ondel{
+	color: #999;
 }
 .comment-i .comment-replyto{
 	margin: 0px 0px 30px 70px;
@@ -272,9 +286,9 @@
 .comment-i .readmore{
 	font-size: 24px;
 	width: 145px;
-	height: 30px;
-	line-height: 30px;
-	border-radius: 15px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 18px;
 	border: 1px solid #999;
 	color: #999;
 	display: block;
@@ -297,7 +311,7 @@
     -o-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     position: absolute;
-    bottom: 12px;
+    bottom: 15px;
     right: 15px;
 }
 
@@ -422,9 +436,9 @@
 }
 .outside #art-text{
 	color: #464646;
-	font-size: 22px;
-	line-height: 34px;
-	font-family: Courier New;
+	font-size: 36px;
+	line-height: 56px;
+	font-family: arial,"microsoft yahei";
 }
 .outside .pub-time{
 	font-size: 22px;
@@ -445,7 +459,7 @@
 	margin-top: 20px;
 }
 .art-img img{
-	width: 710px;
+	width: 710px;comment
 }
 .page-bar{
 	height: 30px;
@@ -508,10 +522,10 @@
 }
 .art-more:after{
 	content: "";
-	height: 10px;
-    width: 10px;
+	height: 20px;
+    width: 20px;
     display: block;
-    border: 2px solid #999;
+    border: 3px solid #999;
     border-right-width: 0;
     border-top-width: 0;
     transform: rotate(-45deg);
@@ -529,13 +543,15 @@
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
-	bottom: 8px;
+	bottom: 0px;
 }
 .art-moretext{
 	margin-top: 30px;
 	display: none;
 	padding: 15px;
 	background: rgb(246,245,244);
+	font-size: 28px;
+	line-height: 54px;
 }
 .download-bar{
 	width: 690px;
@@ -593,6 +609,7 @@
 	position: absolute;
 	top: 95px;
 	left: 200px;
+
 }
 .dl-prompt .intro img{
 	vertical-align: middle;
@@ -609,10 +626,11 @@
 
 
 
+/*懒加载*/
+.sc-imgctl{display: inline-block;}
+.gif-wrap{position: relative;}
+.gif-wrap:after{position: absolute;top: 0px;right: 0px;content: "GIF";display: block;width: 50px;height: 30px;line-height: 30px;font-size: 24px;color: #fff;text-align: center;background: #000;opacity: 0.5;}
 
 
 
 
-.video_iframe{
-	border: 1px solid #333;
-}

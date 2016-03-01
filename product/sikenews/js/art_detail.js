@@ -1,5 +1,167 @@
-;(function($){
+// DOMContentLoaded
+document.addEventListener('DOMContentLoaded',function(){
+	init_interface();
+	if(!isSC()){
+		onWebViewLoad('{"isWifi":"0"}');
+	}
+	SC_Imgcontroller.jpgLoad()
+},false);
 
+
+// 客户端调用方法  ↓↓↓
+var PAGE_FLAG = {
+	isWifi : "1"
+}
+
+// 滚动到评论锚点
+function toComment(){
+	var top = $("#anchor-comment")[0].offsetTop;
+	var stop = document.body.scrollTop;
+	$("html,body").animate({scrollTop:top},300)
+}
+// 新评论
+function newComment(data){
+	eval('data ='+data);
+	var s_content = data.content.length>80?data.content.substr(0,72)+"...":data.content
+    var l_content = data.content.length>80?data.content:null;
+	var comment_data = {
+		data:[
+			{ 
+				id:data.id,
+				nickname: data.user.nickname,
+				avatar: data.user.avatar,
+				visible:"1",
+				s_content: s_content,
+				l_content: l_content,
+				time: formatDate(data.time),
+				like: data.likeCount,
+			    r_nickname: data.replyTo==null?null:data.replyTo.user.nickname,
+				r_content: data.replyTo==null?null:data.replyTo.content.substr(0,14)+"...",
+				r_visible:"1"
+			}
+		]
+	}
+	
+	//console.log(comment_data)
+	var comment = template('temp-comment', comment_data);
+	$("#comment-start").after(comment);
+	loadflag.noComment = false;
+	loadingUI();
+}
+function delComment(cid){
+	$('.comment-i[data-comid="'+cid+'"]').fadeOut()
+}
+// wifi环境
+function isWifi(data){
+	eval('data ='+data);
+	PAGE_FLAG.isWifi = data;
+	console.log(PAGE_FLAG.isWifi)
+}
+// webView加载后执行
+function onWebViewLoad(data){
+	eval('data ='+data);
+	console.log(data)
+	PAGE_FLAG.isWifi = data.isWifi
+	console.log(data.isWifi)
+	SC_Imgcontroller.gifwrap()
+	if(data.isWifi == 0){
+		SC_Imgcontroller.gifLoad(document.getElementById("art-text"))
+	}else if(data.isWifi == 1){
+		SC_Imgcontroller.gifLoadall(document.getElementById("art-text"))
+	}
+}
+
+
+
+
+// JS bridge ↓↓↓
+	// 文章初始化数据
+	function share_data(type){
+		var s_title = SHARE_DATA.title==""?$("#art-title").html():SHARE_DATA.title;
+		var share_data = '{"type" : "'+type+'","title" : "'+s_title+'","url" : "'+location.href+'","image" : "'+SHARE_DATA.share_image+'","desc":"'+getDesc()+'","likeCount":"'+INIT_DATA.post_like+'","commentCount":"'+INIT_DATA.post_comment+'"}'
+		//console.log(share_data)
+		function getDesc(){
+			var text = SHARE_DATA.desc==""?$("#art-text").html():SHARE_DATA.desc;
+			return text.replace(/(<[^>]+>)/g,"").replace(/(^\s+)|(\s+$)/g,"").substr(0,30);
+		}
+		return share_data;
+	}
+
+	// 分享初始化接口
+	function init_interface(){
+		if(isSC()){
+			if(isIOS()){
+				window.webkit.messageHandlers.onArticleInit.postMessage(share_data("all"))
+			}else{
+				window.score.onArticleInit(share_data("all"))
+			}
+			
+		}else{
+			console.log(share_data("all"))
+		}
+	}
+	
+	
+
+	// 分享交互
+	function share_interface(type){
+		if(isSC()){
+			if(isIOS()){
+				window.webkit.messageHandlers.share.postMessage(share_data(type))
+			}else{
+				window.score.share(share_data(type))
+			}
+		}else{
+			console.log(share_data(type))
+		}
+	}
+	// 确定type的分享
+	$(".share-i").each(function(){
+		$(this).bind("click","",function(e){
+			var t = $(e.target);
+			var type = t.attr("data-type");
+			share_interface(type);
+		})
+	})
+	$(".bar-share").on("click",function(e){
+		share_interface("all")
+	})
+
+
+
+	// 评论交互
+	function comment_interface(cdata){
+		if(isSC()){
+			if(isIOS()){
+				window.webkit.messageHandlers.comment.postMessage(cdata)
+			}else{
+				window.score.comment(cdata)
+			}
+		}else{
+			console.log(cdata)
+		}
+	}
+
+	// 专栏跳转
+	function openSpecial(sdata){
+		if(isSC()){
+			if(isIOS()){
+				window.webkit.messageHandlers.openSpecial.postMessage(sdata)
+			}else{
+				window.score.openSpecial(sdata)
+			}
+		}else{
+			console.log(sdata)
+		}
+	}
+	$(".writer-info").bind("click",function(){
+		var sdata = $(this).attr("data-special");
+		openSpecial(sdata)
+	})
+
+
+
+// 页内JS
 
 // 加载评论-------------------
 
@@ -11,7 +173,7 @@
 	}
 
 	scroll_load();
-	
+
 	// 滚动事件
 	function scroll_load(){
 		var comment = $("#new-comment .comment-i")
@@ -36,8 +198,7 @@
 				}
 			}
 		})
-	}
-
+	} 
 
 	// 控制加载UI的变化
 	function loadingUI(){
@@ -64,7 +225,7 @@
 		// if(loadflag.loading&&loadflag.loadend){return;}
 		$.ajax({ 
 
-            url: INIT_DATA.comment_api+"?11",
+            url: INIT_DATA.comment_api+"?124",
             type: 'get',
             dataType: 'json',
             data:{p:INIT_DATA.post_id,b:loadflag.btime},
@@ -88,21 +249,30 @@
             			var l_content = c[i].content.length>80?c[i].content:null;
 	            		var comment_data = {
 	            			id:c[i].id,
+	            			visible:c[i].visibleStatus,
+	            			del_official:null,
+	            			del_self:null,
 							nickname: c[i].user.nickname,
 							avatar: c[i].user.avatar==""?INIT_DATA.init_avatar:c[i].user.avatar,
 							s_content: s_content,
 							l_content: l_content,
 							time: formatDate(c[i].time),
 							like: c[i].likeCount,
+							islike: readLS(INIT_DATA.post_id,c[i].id)?"on":"",
 						    r_nickname: c[i].replyTo==null?null:c[i].replyTo.user.nickname,
-							r_content: c[i].replyTo==null?null:c[i].replyTo.content.substr(0,14)+"..."
+							r_content: c[i].replyTo==null?null:c[i].replyTo.content.substr(0,14)+"...",
+							r_visible:c[i].replyTo==null?null:c[i].replyTo.visibleStatus
 						}
+						//comment_data = isDelComment(comment_data)
 						comment_datas.data.push(comment_data);
 	            	}
 
 	                //刷模板
 	                var comment = template('temp-comment', comment_datas);
 					$("#comment-end").before(comment);
+					setTimeout(function(){
+						$(".comment-i.fade_in").removeClass("fade_in")
+					},3000)
             	}
             	
 				// 更新flag
@@ -116,6 +286,17 @@
       	});
 		
 	}
+
+	// 评论是否被删除
+	// function isDelComment(data){
+	// 	var data = data
+	// 	if(data.visible == 2){
+	// 		data.del_official = "1";
+	// 	}else if(data.visible == 3){
+	// 		data.del_self = "1";
+	// 	}
+	// 	return(data)
+	// }
 
 	// 传入时间戳转格式 
 	function formatDate(d){
@@ -139,39 +320,50 @@
 		return $(n_comment[num]).attr("data-time")
 	}
 
-
-
-
-
-	// 新评论-------------------
-	function newComment(data){
-		eval('data ='+data);
-		var s_content = data.content.length>80?data.content.substr(0,72)+"...":data.content
-        var l_content = data.content.length>80?data.content:null;
-		var comment_data = {
-			data:[
-				{
-					id:data.id,
-					nickname: data.user.nickname,
-					avatar: data.user.avatar,
-					s_content: s_content,
-					l_content: l_content,
-					time: formatDate(data.time),
-					like: data.likeCount,
-				    r_nickname: data.replyTo==null?null:data.replyTo.user.nickname,
-					r_content: data.replyTo==null?null:data.replyTo.content.substr(0,14)+"..."
-				}
-			]
+	// 评论状态（本地存储） - localStorage
+	var ls_comment = localStorage.COMMENT_LIKE_DATA;
+	function writeLS(p,c){
+		if(c == 0){
+			return false;
 		}
-		
-		//console.log(comment_data)
-		var comment = template('temp-comment', comment_data);
-		$("#comment-start").after(comment);
-		loadflag.noComment = false;
-		loadingUI();
 
+		ls_comment = localStorage.COMMENT_LIKE_DATA;
+		if(typeof ls_comment!="undefined"){
+			var like_data = JSON.parse(ls_comment)
+			console.log(like_data[p])
+			if(like_data[p] instanceof Array){
+				like_data[p].push(c);
+			}else{
+				like_data[p] = [c]
+			}
+			
+		}else{
+			var like_data = {}
+			like_data[p] = []
+			like_data[p].push(c)
+		}
+		console.log(JSON.stringify(like_data))
+		localStorage.COMMENT_LIKE_DATA = JSON.stringify(like_data)
 	}
-	window.newComment = newComment;
+
+	function readLS(p,c){
+		if(c == 0||typeof ls_comment=="undefined"){
+			return false;
+		}
+		var like_data = JSON.parse(ls_comment)
+		if(like_data[p] instanceof Array){
+			var str = like_data[p].join(",")
+			return str.match(c)
+		}
+	}
+
+	// 检查点赞
+	$(".comment-i").each(function(){
+		if(readLS(INIT_DATA.post_id,$(this).attr("data-comid"))){
+			$(this).find(".dolike").addClass("on")
+		}
+	})
+
 
 
 // 显示更多-------------------
@@ -195,21 +387,19 @@
 		
 	})
 	
+
+
 // 评论点赞-------------------
 	$(".art-comment").on("click",".dolike",function(e){
-		
-
 		var t = $(e.target),
 			n = parseInt(t.html()),
 			cid = parseInt(t.parent().parent().attr("data-comid"));
-
 		if(!t.hasClass("on")&&cid == "0"){
 			t.html(n+1);
 	       	t.addClass("on");
 	       	
 	       	return;
 		}
-
 		if(!t.hasClass("on")){
 			$.ajax({
 				url: INIT_DATA.like_api,
@@ -220,6 +410,7 @@
 	            	if(rs.ret==0){
 	            		t.html(n+1)
 	            		t.addClass("on")
+	            		writeLS(INIT_DATA.post_id,cid)
 	            	}
 	            }
 			})
@@ -332,11 +523,23 @@
 
 			if(isWX()){
 				$("#dl-bar .dl-btn").bind("click",function(){
+
+					// 临时代码
+					if(isIOS()){
+						popAlert("肆客足球iOS版即将推出,敬请期待 :)")
+						return;
+					}
+
 					top = document.body.scrollTop;
 					$(".dl-prompt").show();
 					$("#page_wrap").css({"position":"fixed","top":-top})
 				})
 				$(".dl-prompt").bind("click",function(){
+					// 临时代码
+					if(isIOS()){
+						return;
+					}
+
 					$(this).hide()
 					$("#page_wrap").css({"position":"static"})
 					document.body.scrollTop = top;
@@ -350,6 +553,11 @@
 
 			}else if(isIOS()){
 				$("#dl-bar .dl-btn").bind("click",function(){
+
+					if(isIOS()){
+						popAlert("肆客足球iOS版即将推出,敬请期待 :)")
+						return;
+					}
 					location.href = DOWNLOAD_DATA.ios_link;
 				})
 			}else if(isAndroid()){
@@ -362,101 +570,81 @@
 
 	},false);
 	
+
+
+// 弹出提示
+function popAlert(t){
+	$(".g_prompt").remove();
+	var prompt = "<div class='g_prompt' style='width: 380px;padding: 20px;color: #fff;background: rgba(0,0,0,0.7);position: fixed;left: 50%;top: 20%;margin-left: -215px;text-align: center;font-size: 32px;line-height: 52px;border-radius: 10px;z-index: 999;'>"+t+"</div>";
+	$("#page_wrap").before(prompt)
+	setTimeout(function(){
+		$(".g_prompt").animate({"opacity":0},300)
+	},1800)
+}
+
+// 图片懒加载
+	// css动态加载
 	
+	var SC_Imgcontroller = {
+		wrap : null,
+		imgClass : "sc-imgctl",
+		gifClass : "gif-wrap",
+		jpgClass : "jpg-wrap",
 
+		gifwrap : function(){
+			var gifwrap = '<span class="sc-imgctl gif-wrap"></span>'
+			$(".img-gif").wrap(gifwrap)
+		},
 
-
-// JS bridge ↓↓↓
-
-// 分享-------------------
-
-
-	
-	// 文章初始化数据
-	function share_data(type){
-		var s_title = SHARE_DATA.title==""?$("#art-title").html():SHARE_DATA.title;
-		var share_data = '{"type" : "'+type+'","title" : "'+s_title+'","url" : "'+location.href+'","image" : "'+SHARE_DATA.share_image+'","desc":"'+getDesc()+'","likeCount":"'+INIT_DATA.post_like+'","commentCount":"'+INIT_DATA.post_comment+'"}'
-		//console.log(share_data)
-		function getDesc(){
-			var text = SHARE_DATA.desc==""?$("#art-text").html():SHARE_DATA.desc;
-			return text.replace(/(<[^>]+>)/g,"").replace(/(^\s+)|(\s+$)/g,"").substr(0,30);
-		}
-		return share_data;
-	}
-	// 分享初始化接口
-	function shareInit_interface(){
-		console.log("进入shareInit_interface()")
-		if(isSC()){
-			console.log("进入isSC()")
-			if(isIOS()){
-				console.log("进入isIOS()")
-				window.webkit.messageHandlers.onArticleInit.postMessage(share_data("all"))
-				console.log(share_data("all"))
-			}else{
-				window.score.onArticleInit(share_data("all"))
+		gifLoadall : function(wrap){
+			var imglist = wrap.querySelectorAll("."+this.gifClass)
+			console.log(imglist)
+			for(var i=0;i<imglist.length;i++){
+				if(el.getAttribute("data-original")){
+					var el = imglist[i].childNodes[0];
+					el.src=el.getAttribute("data-original");
+					imglist[i].classList.add("on");
+				}
 			}
-			
-		}else{
-			console.log(share_data("all"))
+		},
+
+		gifLoad : function(wrap){
+			var t = this;
+			t.wrap = wrap;
+			t.wrap.addEventListener("click",function(e){
+				// 获取点击元素
+				if(e.target.getAttribute("data-original")){
+					if(e.target && e.target.parentNode.classList.contains(t.gifClass)){
+						e.target.src=e.target.getAttribute("data-original");
+						e.target.parentNode.classList.add("on")
+					}
+				}
+			})
+		},
+
+		// 依赖lazyload
+		jpgLoad : function(){
+			// 懒加载
+			$("img.lazy").lazyload({
+			    effect : "fadeIn",
+			    threshold : 100
+			});
 		}
 	}
-	// 初始化文章
-	shareInit_interface();
 	
 
 
-	// 分享交互
-	function share_interface(type){
-		if(isSC()){
-			window.score.share(share_data(type))
-		}else{
-			console.log(share_data(type))
-		}
-	}
-	// 确定type的分享
-	$(".art-share").on("click",".share-i",function(e){
-		var t = $(e.target);
-		var type = t.attr("data-type");
-		share_interface(type);
-	})
-	$(".bar-share").on("click",function(e){
-		share_interface("all")
-	})
+
+// bug迭代区
+// 修复iOS 1.0bug
+function onisWebViewLoad(data){
+	onWebViewLoad(data);
+}
+
+	
+
+	
 
 
 
-	// 评论交互
-	function comment_interface(cdata){
-		if(isSC()){
-			window.score.comment(cdata)
-		}else{
-			console.log(cdata)
-		}
-	}
-
-	// 专栏跳转
-	function openSpecial(sdata){
-		if(isSC()){
-			window.score.openSpecial(sdata)
-		}else{
-			console.log(sdata)
-		}
-	}
-	$(".writer-info").bind("click",function(){
-		var sdata = $(this).attr("data-special");
-		openSpecial(sdata)
-	})
-
-	// 滚动到评论锚点
-	function toComment(){
-		var top = $("#anchor-comment")[0].offsetTop;
-		var stop = document.body.scrollTop;
-		$("html,body").animate({scrollTop:top},300)
-	}
-	window.toComment = toComment;
-
-
-
-
-})(jQuery)
 

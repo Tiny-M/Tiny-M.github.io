@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--[if IE 6 ]> <html id="sc_wrap" class="sc_ua_ie6 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 7 ]> <html id="sc_wrap" class="sc_ua_ie7 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 8 ]> <html id="sc_wrap" class="sc_ua_ie8 sc_ua_ielte8"> <![endif]-->
+<!--[if IE 9 ]> <html id="sc_wrap" class="sc_ua_ie9"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!--> <html id="sc_wrap"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta >
+<title>Score_Temp</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" id="viewport" content="target-densitydpi=device-dpi,width=750,user-scalable=no" />
+
+<!-- head static start -->
+<link rel="stylesheet" href="css/_common.css" />
+<link rel="stylesheet" href="css/live_super.css" />
+<script src="lib/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/template-3.js" type="text/javascript" charset="utf-8"></script>
+<!-- head static end -->
+
+<script>
+    var INIT_DATA = {
+        webSocket_sever : "ws://127.0.0.1:3003/ws",
+        chat_id : "chat1"
+    }
+</script>
+</head>
+<body>
+<div class="page_wrap" id="page_wrap">
+    <div class="new_alert">↑有新消息哦&nbsp;</div>
+    <div class="page_container">
+        <!-- 项目内容 -->
+
+        <section class="live-list">
+            <div id="live-start"></div>
+                       <div class="live-i">
+                <p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">5分18秒！杨超怎么总进球啊！这牲口！</p>
+                </div>
+            </div>
+            <div id="live-start"></div>
+                       <div class="live-i">
+                <p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">5分18秒！杨超怎么总进球啊！这牲口！</p>
+                </div>
+            </div>
+            <div id="live-start"></div>
+                       <div class="live-i">
+                <p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">5分18秒！杨超怎么总进球啊！这牲口！</p>
+                </div>
+            </div>
+			<div class="live-i">
+				<p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">2分30秒！恭喜杨超又进球了！！</p>
+                </div>
+			</div>
+            <div class="live-i">
+                <p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">1分20秒！恭喜杨超进球！</p>
+                    <img class="lc-img" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png">
+                </div>
+            </div>
+            <div class="live-i">
+                <p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">1分20秒！恭喜杨超进球！</p>
+                    <img class="lc-img" src="http://7xpd1v.com2.z0.glb.qiniucdn.com/10_1454238962_1454239553249.png">
+                </div>
+            </div>
+            <div class="live-i">
+                <p class="lc-compere">小颜直播</p>
+                <span class="lc-time">22:22</span>
+                <div class="lc-content">
+                    <p class="lc-text">现在比赛开始！</p>
+                </div>
+            </div>
+        </section>
+    </div>
+	
+<script id="temp-comment" type="text/html">
+    <div class="live-i">
+        <p class="lc-compere">{{name}}</p>
+        <span class="lc-time">{{time}}</span>
+        <div class="lc-content">
+            <p class="lc-text">{{content}}</p>
+            {{each image as value}}
+            <img class="lc-img" src="{{value}}">
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+</div>
+
+
+
+<!-- foot -->
+<!-- common for page-->
+<script src="js/_common.js" type="text/javascript" charset="utf-8"></script>
+<!-- js for page -->
+<script src="js/live_super.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
