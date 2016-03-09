@@ -1,0 +1,134 @@
+.area{
+	width: 1200px;
+	margin: 0 auto;
+}
+.firstpage{
+	height: 600px;
+	background: url(../images/bg1.jpg)center 0px no-repeat;
+	position: relative;
+}
+.page_nav{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: url(../images/opwhite.png);
+	z-index: 1000;
+}
+.logo{
+	float: left;
+	line-height: 50px;
+	height: 50px;
+	width: 150px;
+	overflow: hidden;
+	text-indent: 300px;
+	background: url(../images/logo.png) 0px 48% no-repeat;
+	background-size: 75%;
+	margin-left: 150px;
+}
+.slogan{
+	color: #999;
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: 500;
+	float: right;
+	margin-right: 150px;
+}
+.app_court{
+	width: 450px;
+	position: absolute;
+	left: 50%;
+	bottom:115px;
+	margin-left: 30px;
+}
+.app_intro{
+	font-size: 24px;
+	opacity: 0.6;
+	color: #fff;
+	font-family: "microsoft yahei";
+}
+.dl_box{
+	height: 52px;
+	margin-top: 20px;
+}
+.dl_btn{
+	width: 130px;
+	height: 50px;
+	border: 1px solid #fed700;
+	float: left;
+	margin-right: 30px;
+	line-height: 50px;
+	font-size: 24px;
+	color: #fff;
+	text-indent: 10px;
+	position: relative;
+	cursor: pointer;
+}
+.dl_btn:after{
+	content: "";
+	width: 8px;
+	height: 8px;
+	border: 2px solid #fed700;
+	border-bottom: 2px solid transparent;
+	border-left: 2px solid transparent;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+    margin-top: -6px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.dl_btn:hover:after{
+	right: 10px;
+}
+.slider{
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+}
+.slider .textbox{
+	width: 580px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	margin-top: -100px;
+	text-align: center;
+	font-family: "microsoft yahei","华文细黑";
+	color: #333;
+	border-right: 1px solid #fed700;
+}
+.slider .textbox h2{
+	font-size: 54px;
+	font-weight: 300;
+	color: #333;
+}
+.slider .textbox p{
+	font-size: 24px;
+	font-weight: 300;
+	color: #666;
+}
+.s2{
+	background: #e8e8e8 url(../images/tt.png) 70% center no-repeat;
+	background-attachment: scroll;
+}
+.s3{
+	background:#f0f0f0 url(../images/cq.png) 70% center no-repeat;
+	background-attachment: fixed;
+}
+.s4{
+	background: #e8e8e8 url(../images/zl.png) 70% center no-repeat;
+	background-attachment: fixed;
+}
+.s5{
+	background: #f0f0f0 url(../images/cjyl.png) 70% center no-repeat;
+	background-attachment: fixed;
+}
+.s6{
+	background:#e8e8e8 url(../images/sszx.png) 70% center no-repeat;
+	background-attachment: fixed;
+}
