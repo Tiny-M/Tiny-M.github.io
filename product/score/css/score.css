@@ -4,7 +4,7 @@
 }
 .firstpage{
 	height: 600px;
-	background: url(../images/bg1.jpg)center 0px no-repeat;
+	background: #0c0c0b url(../images/bg1.jpg)center 0px no-repeat;
 	position: relative;
 }
 .page_nav{
@@ -84,6 +84,17 @@
 }
 .dl_btn:hover:after{
 	right: 10px;
+}
+.qr_link{
+	width: 180px;
+	height: 180px;
+	background: #fff url(../images/qr.png);
+	background-size: cover;
+	position: absolute;
+	top: 180px;
+	left: 50%;
+	margin-left: 30px;
+
 }
 .slider{
 	height: 600px;
