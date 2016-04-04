@@ -4,6 +4,15 @@ $(function(){
 	showDLBtn();
 	SCORE.downloadBtn("downloadBtn")
 	SCORE.WXshare(SHARE_DATA)
+	var player = videojs('player', {}, function() {
+		console.log("bind playbtn")
+		var t = this;
+		$(".playbtn").bind("click",function(){
+			console.log("click playbtn")
+		  	t.play();
+		  	$(this).hide()
+		})
+	});
 	
 });
 
