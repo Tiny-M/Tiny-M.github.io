@@ -89,19 +89,12 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/videojs/video.js"></script>
 <!-- <script src="http://vjs.zencdn.net/5.8/video.min.js"></script> -->
-<script src="lib/videojs-contrib-hls.min.js"></script>
+<!-- <script src="lib/videojs/videojs.hls.min.js"></script> -->
+<!-- <script src="lib/videojs-contrib-hls.min.js"></script> -->
 <script src="js/live_video.js"></script>
 <script>
 
-		var player = videojs('player', {}, function() {
-		console.log("bind playbtn")
-		var t = this;
-		$(".playbtn").bind("click",function(){
-			console.log("click playbtn")
-		  	t.play();
-		  	$(this).hide()
-		})
-	});
+		
 	
 </script>
 </body>
