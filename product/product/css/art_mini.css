@@ -90,6 +90,10 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
     color: #505050;
     margin-top: 50px;
 }
+.sc_video{
+    width: 710px;
+    height: 408px;
+}
 
 /*懒加载*/
 .sc-imgctl{display: inline-block;}

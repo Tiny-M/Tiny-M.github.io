@@ -23,7 +23,7 @@
 
 		var INIT_DATA = {
 	        webSocket_sever : "ws://123.56.179.35:9000/ws",
-	        chat_id:"1",
+	        chat_id:"877",
 	        islive:1
 	    }
 	    var SHARE_DATA = {
@@ -40,17 +40,14 @@
 
     <div class="video-container">
         <!-- 项目内容 -->
-        <!-- <video class="live-video" >
-        	<source src="movie.ogg" type="video/ogg">
-        </video> -->
+
 		<div class="video-wrap">
 		    <div class="video-wrap">
             <video id="player" class="video-js" width="100%" height="100%" webkit-playsinline poster="http://7xqb60.com2.z0.glb.qiniucdn.com/1459479490.590221_avatar.jpg" data-setup="{}">
-                                                <source src="http://video.qiuduoduo.cn/61-292-1459479502507.flv"  type='video/flv'>
-                <source src="http://video.qiuduoduo.cn/61-292-1459479502507.flv_playlist.m3u8"  type='application/x-mpegURL'>
+                <source src="rtmp://videolive.qiuduoduo.cn/live/EXT-ENC-2/sike/111" type="rtmp/mp4">
+                <source src="http://demo.powzamedia.com:8000/live/EXT-ENC-2/sike/836_/seg0/index.m3u8"  type='application/x-mpegURL'>
             </video>
         </div>
-			
 		</div>
 
 		<div class="videoctl">
@@ -87,21 +84,15 @@
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript" charset="utf-8"></script>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
 <script src="lib/videojs/video.js"></script>
 <!-- <script src="http://vjs.zencdn.net/5.8/video.min.js"></script> -->
-<script src="lib/videojs-contrib-hls.min.js"></script>
+<!-- <script src="lib/videojs/videojs.hls.min.js"></script> -->
+<!-- <script src="lib/videojs-contrib-hls.min.js"></script> -->
 <script src="js/live_video.js"></script>
 <script>
 
-		var player = videojs('player', {}, function() {
-		console.log("bind playbtn")
-		var t = this;
-		$(".playbtn").bind("click",function(){
-			console.log("click playbtn")
-		  	t.play();
-		  	$(this).hide()
-		})
-	});
+		
 	
 </script>
 </body>

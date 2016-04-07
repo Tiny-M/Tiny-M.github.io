@@ -73,9 +73,10 @@ html,body{
 .avatar_box{
 	width: 0.5rem;
 	height: 0.5rem;
-	border-radius: 0.25rem;
+	border-radius: 999px;
 	margin-left: -0.7rem;
 	float: left;
+	overflow: hidden;
 }
 .avatar_box img{
 	width: 0.5rem;
@@ -122,7 +123,7 @@ html,body{
 }
 .us-name{
 	margin-right: 0.15rem;
-	color: #6fb5fc;
+	color: #2ba6fc;
 }
 .chat-i .content:before{
 	width: 0px;
@@ -222,6 +223,7 @@ html,body{
 	margin-left: -1rem;
 	background: url(../images/btn_play.png);
 	background-size: 100%;
+	z-index: 99999999;
 }
 
 

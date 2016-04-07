@@ -1,9 +1,18 @@
 $(function(){
-	openWs();
 	islive();
+	openWs();
 	showDLBtn();
 	SCORE.downloadBtn("downloadBtn")
 	SCORE.WXshare(SHARE_DATA)
+	var player = videojs('player', {}, function() {
+		console.log("bind playbtn")
+		var t = this;
+		$(".playbtn").bind("click",function(){
+			console.log("click playbtn")
+		  	t.play();
+		  	$(this).hide()
+		})
+	});
 	
 });
 
@@ -31,7 +40,7 @@ function openWs(){
 	};
 	ws.onopen = function () {
 		console.log("已建立链接")
-   		// ws.send("chat_join,chat"+chat_id+",,")
+   		ws.send("show_join,show"+chat_id+",,")
 	};
 	ws.onclose = function() {    
 	   console.log("WebSocket服务器关闭")
@@ -54,7 +63,7 @@ function openWs(){
 
 			console.log(data);
 			newContent(data);
-		}else if(type == "show_sendmsg"){
+		}else if(type == "show_info"){
 			var data = res.match(/{.+}/);
 			eval("data = "+data)
 			var arg = res.replace(data,"").split(",")
@@ -63,11 +72,15 @@ function openWs(){
 
 			console.log(data);
 			$("#watching").html(data.watchingCount);
+			if(data.isFinish==true){
+				$(".offline").show();
+			}
+			
 		}
 	}
 
 	var chat_flag = {
-		domSum:8,
+		domSum:5,
 		chatSum : 0,
 		drift : 0,
 		nextTar : 1,
@@ -76,8 +89,7 @@ function openWs(){
 	var chat_box = $("#chat-wrap");
 	function newContent(data){
 		var tar;
-		console.log(chat_flag.nextTar)
-		console.log(chat_flag.nextTar)
+
 		if(chat_flag.chatSum<chat_flag.domSum){
 
 			var chat_i = "";

@@ -90,6 +90,9 @@ function openWs(){
 	}
 
 	function formatDate(d){
+		while(d.toString().length<13){
+			d = d*10;
+		}
 		var date = new Date(parseInt(d));
 		var time =  addZero(date.getHours())+":"+addZero(date.getMinutes())
 		function addZero(n){

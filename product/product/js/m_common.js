@@ -130,6 +130,15 @@ SCORE.__DEFULT = {
 	}
 
 	/*
+	* 工具类
+	*/
+
+	function tool_getUrlData(){
+		var a = location.search;
+		console.log(a)
+	}
+
+	/*
 	* H5页下载链接
 	*/
 	function downloadBtn(id){
@@ -205,6 +214,8 @@ SCORE.__DEFULT = {
 		   	});
 		}
 	}
+
+	
 
 	// SCORE对象
 	SCORE.Adapt = Adapt;

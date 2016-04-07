@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded',function(){
 		onWebViewLoad('{"isWifi":"0"}');
 	}
 	SC_Imgcontroller.jpgLoad()
+	resetVideoSize()
 },false);
 
 
@@ -65,10 +66,10 @@ function onWebViewLoad(data){
 	PAGE_FLAG.isWifi = data.isWifi
 	// console.log(data.isWifi)
 	SC_Imgcontroller.gifwrap()
-	if(!isSC()){
-		SC_Imgcontroller.gifLoad(document.getElementById("art-text"))
-	}else{
+	if(isSC()&&PAGE_FLAG.isWifi == 1){
 		SC_Imgcontroller.gifLoadall(document.getElementById("art-text"))
+	}else{
+		SC_Imgcontroller.gifLoad(document.getElementById("art-text"))
 	}
 }
 function onisWebViewLoad(data){
@@ -252,7 +253,7 @@ function onisWebViewLoad(data){
 		// if(loadflag.loading&&loadflag.loadend){return;}
 		$.ajax({ 
 
-            url: INIT_DATA.comment_api+"?1524",
+            url: INIT_DATA.comment_api+"?15523",
             type: 'get',
             dataType: 'json',
             data:{p:INIT_DATA.post_id,b:loadflag.btime},
@@ -328,6 +329,9 @@ function onisWebViewLoad(data){
 
 	// 传入时间戳转格式 
 	function formatDate(d){
+		while(d.toString().length<13){
+			d = d*10;
+		}
 		var date = new Date(parseInt(d));
 		var time =  addZero(date.getMonth()+1)+"-"+addZero(date.getDate())+" "+addZero(date.getHours())+":"+addZero(date.getMinutes())
 		function addZero(n){
@@ -404,16 +408,16 @@ function onisWebViewLoad(data){
 	})
 
 	// 出墙
-	$(".art-more").bind("click",function(){
-		if($(this).hasClass("on")){
-			$(".art-moretext").hide()
-			$(this).removeClass("on")
-		}else{
-			$(".art-moretext").show()
-			$(this).addClass("on")
-		}
+	// $(".art-more").bind("click",function(){
+	// 	if($(this).hasClass("on")){
+	// 		$(".art-moretext").hide()
+	// 		$(this).removeClass("on")
+	// 	}else{
+	// 		$(".art-moretext").show()
+	// 		$(this).addClass("on")
+	// 	}
 		
-	})
+	// })
 	
 
 
@@ -469,11 +473,12 @@ function onisWebViewLoad(data){
 			$(this).addClass("on")
 			
 	 	}).on("mouseup",".comment-i",function(e){
+
 	 		p_event.endX = e.pageX;
 			p_event.endY = e.pageY;
 
 	 		$t = $(e.target);
-			if($t.hasClass("readmore")||$t.hasClass("dolike")){
+			if($t.hasClass("readmore")||$t.hasClass("dolike")||$t.hasClass("comment-del")){
 				return
 			}
 			$(this).removeClass("on")
@@ -497,15 +502,17 @@ function onisWebViewLoad(data){
 	 	}).on("touchmove",".comment-i",function(e){
 			$(this).removeClass("on")
 	 	}).on("touchend",".comment-i",function(e){
+
 	 		e = e.originalEvent.changedTouches[0];
 	 		p_event.endX = e.pageX;
 			p_event.endY = e.pageY;
 
 	 		$t = $(e.target);
-			if($t.hasClass("readmore")||$t.hasClass("dolike")){
+	 		$(this).removeClass("on")
+			if($t.hasClass("readmore")||$t.hasClass("dolike")||$(this).hasClass("comment-del")){
 				return
 			}
-			$(this).removeClass("on")
+			
 
 			if(Math.abs(p_event.endY-p_event.startY)<10){
 				var cdata = '{"cid": "'+$(this).attr("data-comid")+'","nickname" : "'+$(this).find(".user-name").html()+'","content" : "'+$(this).find(".c-content").html().substr(0,14)+"..."+'"}'
@@ -521,6 +528,7 @@ function onisWebViewLoad(data){
 // 文章点赞
 	$(".bar-like").bind("click",function(){
 		var t = $(this),
+
 			n = parseInt($(this).html()),
 			pid = $(this).attr("data-pageid");
 
@@ -594,7 +602,7 @@ function onisWebViewLoad(data){
 				var el = imglist[i].childNodes[0];
 				if(el.getAttribute("data-original")){
 					el.src=el.getAttribute("data-original");
-					imglist[i].classList.add("loading");
+					imglist[i].classList.add("on");
 				}
 			}
 		},
@@ -703,7 +711,14 @@ var wx_share_data = {
 function onisWebViewLoad(data){
 	onWebViewLoad(data);
 }
-
+// 
+function resetVideoSize(){
+	if($(".video_iframe")[0]){
+		var v_src = $(".video_iframe").attr("src")
+		v_src = v_src.replace("width=710","").replace("height=408","")
+		$(".video_iframe").attr("src",v_src)
+	}
+}
 	
 
 	
