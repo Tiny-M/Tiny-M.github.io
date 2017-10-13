@@ -1,3 +1,880 @@
-body{-webkit-tap-highlight-color:transparent;line-height:1.5;background:#fff;font-size:12px;font-family:Helvetica,sans-serif,Roboto,HelveticaNeue,Arial,sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%}ol,ul{list-style:none}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:normal}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;*font-size:100%}fieldset,img,a img,:link img,:visited img{border:0}a{text-decoration:none}a:hover{text-decoration:underline}:focus{outline:0}table{border-collapse:collapse;border-spacing:0}caption,th{text-align:left}sup,sub{font-size:100%;vertical-align:baseline}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}.clear,.clearfix:after{clear:both;height:0;overflow:hidden;display:block}.clearfix:after{visibility:hidden;content:"."}.clearfix{*zoom:1}html,body{height:100%;overflow:hidden}.swiper-container,.swiper-wrapper{height:100%}.page{height:100%}#p1{background:#fff;position:relative}#p1 .down,.p3-1 .down{width:1rem;height:.8rem;background:url('../img/down1.png');background-size:100% 100%;position:absolute;bottom:.1rem;left:50%;margin-left:-0.5rem;z-index:999;-webkit-animation:down .5s alternate infinite;-o-animation:down .5s alternate infinite;animation:down .5s alternate infinite;display:none}@keyframes down{0%{bottom:.1rem}100%{bottom:.2rem}}.p1-1{width:6rem;height:60%;background:#df002b;position:absolute;bottom:42%;left:50%;margin-left:-3rem;-webkit-transition:all .3s;-moz-transition:all .3s;-ms-transition:all .3s;-o-transition:all .3s;transition:all .3s}.p1-1 .loadingtext{font-size:.4rem;color:#fff;position:absolute;top:90%;text-align:center;width:100%}.p1-1 .loading{width:.8rem;height:.4rem;margin:0 auto;margin-top:100px;position:absolute;bottom:20%;left:50%;margin-left:-0.4rem}.p1-1 .loading span{display:inline-block;width:.08rem;height:100%;background:#fff;-webkit-animation:load 1s ease infinite}@-webkit-keyframes load{0%,100%{height:.4rem;background:#fff}50%{height:.7rem;margin:-0.15rem 0;background:#fff}}.p1-1 .loading span:nth-child(2){-webkit-animation-delay:.2s}.p1-1 .loading span:nth-child(3){-webkit-animation-delay:.4s}.p1-1 .loading span:nth-child(4){-webkit-animation-delay:.6s}.p1-1 .loading span:nth-child(5){-webkit-animation-delay:.8s}作者：JR93 链接：http://www.jianshu.com/p/6ac3e3e12d61 來源：简书 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 @keyframes around{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@-moz-keyframes around{0%{-moz-transform:rotate(0deg)}100%{-moz-transform:rotate(360deg)}}@-webkit-keyframes around{0%{-webkit-transform:rotateZ(0deg)}100%{-webkit-transform:rotateZ(360deg)}}@-o-keyframes around{0%{-o-transform:rotate(0deg)}100%{-o-transform:rotate(360deg)}}.p1-1.s1{width:6rem;height:1%;background:#df002b;position:absolute;bottom:42%;left:50%;margin-left:-3rem}.p1-1.s2{width:3rem;height:1%;background:#df002b;position:absolute;bottom:42%;left:50%;margin-left:-3rem}.p1-1.s3{width:3rem;height:10%;background:#df002b;position:absolute;bottom:90%;left:10%;margin-left:0}.p1-1.s4{-webkit-animation:tobig .5s forwards;-o-animation:tobig .5s forwards;animation:tobig .5s forwards}@keyframes tobig{0%{width:2%;height:10%;bottom:90%}25%{width:2%;height:70%;bottom:30%}50%{width:2%;height:1%;bottom:30%}100%{width:80%;height:1%;bottom:30%}}.p1-2{font-size:3rem;line-height:3rem;font-size:3rem;position:absolute;top:65%;left:50%;margin-left:-3rem;font-weight:700;display:none;text-align:center}.p1-2.s1{display:block}.p1-2.s2{display:block;top:auto;bottom:45%;font-size:1.4rem;line-height:1.5rem}.p1-2.s3{display:block;top:auto;bottom:45%;font-size:1.4rem;line-height:1.5rem}.p1-2.s4{display:block;top:auto;left:5%;margin-left:0;bottom:5%;width:7rem;font-size:2.2rem;color:#df002b;line-height:2.2rem;text-align:left}.p1-2.s5{display:block;top:auto;left:0;margin-left:0;bottom:35%;width:100%;font-size:5rem;color:#333;line-height:5rem;text-align:center}.p1-3{background:#000;height:100%;display:none;position:absolute;width:100%}.p1-3 .text{height:10rem;width:2.5rem;font-size:2.5rem;line-height:2.5rem;color:#fff;position:absolute;top:50%;left:50%;margin-left:-1.25rem;margin-top:-5rem}.p1-3.s1{display:block;z-index:99}.p1-3.s2{display:block;z-index:99}.p1-3.s2 .text{height:9rem;width:3rem;font-size:3rem;line-height:3rem;color:#fff;position:absolute;top:50%;left:50%;margin-left:-1.5rem;margin-top:-4.5rem}.p1-4{background:#000;height:100%;display:none;position:absolute;width:100%}.p1-4 .text2{width:80%;font-size:1.5rem;line-height:1.5rem;color:#df002b;position:absolute;top:30%;left:5%}.p1-4 .text2 span{font-size:1rem;line-height:1rem;color:#fff}.p1-5{background:#fff;height:100%;display:none;position:absolute;width:100%}.p1-5 .text1{height:9rem;width:3rem;font-size:3rem;line-height:3rem;color:#df002b;position:absolute;top:50%;left:50%;margin-left:-1.5rem;margin-top:-4.5rem;font-weight:700;-webkit-transition:all .2s;-moz-transition:all .2s;-ms-transition:all .2s;-o-transition:all .2s;transition:all .2s}
-.p1-5.s1 .text1{height:9rem;width:3rem;font-size:3rem;line-height:3rem;color:#df002b;position:absolute;top:50%;left:50%;margin-left:-1.5rem;margin-top:-4.5rem;font-weight:700;opacity:.2;-webkit-transform:scale(1.2,1.2);-moz-transform:scale(1.2,1.2);-ms-transform:scale(1.2,1.2);-o-transform:scale(1.2,1.2);transform:scale(1.2,1.2)}.p1-5 .text2{height:2rem;width:6rem;font-size:2rem;line-height:2rem;color:#df002b;position:absolute;top:50%;left:50%;margin-left:-3rem;margin-top:-1rem;font-weight:700;display:none;text-align:center}.p1-5.s1 .text2{display:block}.p1-6{background:#fff;height:100%;display:none;position:absolute;width:100%}.p1-6 .r1{width:5rem;height:35%;position:absolute;top:0;left:50%;margin-left:-2.5rem;background:#df002b}.p1-6 .r1{width:5rem;height:35%;position:absolute;top:0;left:50%;margin-left:-2.5rem;background:#df002b;-webkit-transition:height .2s;-moz-transition:height .2s;-ms-transition:height .2s;-o-transition:height .2s;transition:height .2s}.p1-6 .r2{width:5rem;height:35%;position:absolute;bottom:0;left:50%;margin-left:-2.5rem;background:#df002b;-webkit-transition:height .2s;-moz-transition:height .2s;-ms-transition:height .2s;-o-transition:height .2s;transition:height .2s}.p1-6 .text{width:5rem;height:2.5rem;position:absolute;top:50%;left:50%;line-height:2.5rem;margin-left:-2.5rem;margin-top:-1.25rem;font-size:2.5rem;text-align:center;font-weight:700}.p1-6.s1 .r1{width:5rem;height:20%;position:absolute;top:0;left:50%;margin-left:-2.5rem;background:#df002b}.p1-6.s1 .r2{width:5rem;height:20%;position:absolute;bottom:0;left:50%;margin-left:-2.5rem;background:#df002b}.p1-6.s1 .text{width:7rem;height:3em;position:absolute;top:50%;left:50%;line-height:2.8rem;margin-left:-3.5rem;margin-top:-1.5rem;font-size:2.6rem;text-align:center;font-weight:700;color:#df002b}.p1-6.s2 .r1{width:5rem;height:0;position:absolute;top:0;left:50%;margin-left:-2.5rem;background:#df002b}.p1-6.s2 .r2{width:5rem;height:0;position:absolute;bottom:0;left:50%;margin-left:-2.5rem;background:#df002b}.p1-6.s2 .text{display:none}.p1-7{background:#fff;height:100%;display:none;position:absolute;width:100%}.p1-7 .text{width:6rem;position:absolute;height:3rem;top:50%;left:50%;font-size:3rem;line-height:3rem;text-align:center;margin-top:-1.5rem;margin-left:-3rem;color:#df002b;border-bottom:.2rem solid #df002b;font-weight:bolder}.p1-7.s1{display:block}.p1-7.s2{background:#000}.p1-7.s2 .text{color:#fff;border-bottom:0}.p1-7.s3{background:#fff}.p1-7.s3 .text{color:#000;border-bottom:0}.p1-7.s4{background:#000}.p1-7.s4 .text{color:#fff;border-bottom:0}.p1-7.s5{background:#000}.p1-7.s5 .text{color:#df002b;border-bottom:0}#p2{background:#fff;overflow:scroll;overflow-x:visible;-webkit-overflow-scrolling:touch;position:relative}#p2::-webkit-scrollbar{display:none}#p2 .right{width:.5rem;height:.5rem;background:url('../img/right.png');background-size:100%;position:absolute;left:7rem;top:50%;margin-top:-0.25rem;-webkit-animation:right .5s alternate infinite;-o-animation:right .5s alternate infinite;animation:right .5s alternate infinite}#p2 .down{width:.5rem;height:.5rem;background:url('../img/down2.png');background-size:100%;position:absolute;right:3.6rem;bottom:2%;-webkit-animation:down .5s alternate infinite;-o-animation:down .5s alternate infinite;animation:down .5s alternate infinite}@keyframes right{0%{left:7rem}100%{left:6.8rem}}.p2-1{width:45rem;height:100%;background:url('../img/audi-p2.jpg')no-repeat center center;background-size:95%;position:relative}.page3{background:#000;overflow:scroll;position:relative}.page3::-webkit-scrollbar{display:none}#p3.s1 .photo1{margin-left:-10.8rem}#p3.s1 .photo2{margin-left:-3.2rem}.p3-1{width:100%;color:#fff;height:100%;position:relative}.page3 .icon1{width:1.08rem;height:1.16rem;background:url('../img/icon1.jpg');background-size:100% 100%;position:absolute;top:.5rem;right:.5rem;z-index:99}.page3 .name{color:#fff;font-size:1rem;font-style:italic;font-weight:700;border-bottom:2px solid #df002b;line-height:1rem;position:absolute;top:.5rem;left:.5rem;z-index:99}.p3-1 .photo1{width:6.4rem;height:8rem;background:url('../img/audi-p31.jpg?124');background-size:100% 100%;margin-top:-0.5rem;position:absolute;top:2.3rem;left:50%;margin-left:-3.2rem;-webkit-transition:all .3s 1.5s ease-in-out;-moz-transition:all .3s 1.5s ease-in-out;-ms-transition:all .3s 1.5s ease-in-out;-o-transition:all .3s 1.5s ease-in-out;transition:all .3s 1.5s ease-in-out}.p3-1 .photo2{width:6.7rem;height:5.43rem;background:url('../img/audi-p32.jpg');background-size:100% 100%;margin-top:-0.5rem;position:absolute;bottom:30%;left:50%;margin-left:4.5rem;-webkit-transition:all .3s 1.5s ease-in-out;-moz-transition:all .3s 1.5s ease-in-out;-ms-transition:all .3s 1.5s ease-in-out;-o-transition:all .3s 1.5s ease-in-out;transition:all .3s 1.5s ease-in-out}.page3 .bar1{width:3.74rem;height:.87rem;background:#df002b;position:absolute;bottom:20%;left:50%;margin-left:-3.2rem;padding:.02rem .05rem}
-.page3 .bar1 .n{font-size:.4rem;line-height:.48rem;color:#fff}.page3 .bar1 .d{font-size:.28rem;line-height:.35rem;color:#fff}.page3 .text{position:absolute;top:70%;left:50%;margin-left:-3.2rem;padding:.05rem;font-size:.3rem;line-height:.4rem;color:#fff}#p3 .text{top:70%}#p3 .bar1{bottom:30%}.p4-1,.p5-1,.p6-1{width:100%;color:#fff;height:100%;position:relative}#p4 .photo1{width:7.5rem;height:4.22rem;background:url('../img/audi-p33.jpg?211');background-size:100% 100%;margin-top:-0.5rem;position:absolute;top:30%;left:0;margin-left:0;display:block}#p4 .bar1{width:3.74rem;height:.87rem;background:#df002b;position:absolute;bottom:40%;left:50%;margin-left:-3.2rem;padding:.02rem .05rem}#p4 .text{top:65%}#p5 .photo1{width:6.4rem;height:3.8rem;background:url('../img/audi-p34.jpg?124244');background-size:100% 100%;margin-top:-0.5rem;position:absolute;top:35%;left:50%;margin-left:-3.2rem;display:block}#p6 .photo1{width:6.48rem;height:7.53rem;background:url('../img/audi-p35.jpg?123123');background-size:100% 100%;margin-top:-0.5rem;position:absolute;top:20%;left:50%;margin-left:-3.2rem;display:block}#p6 .bar1{bottom:25%}#p6 .text{top:75%}#p7{width:100%;height:100%;position:relative;background:#000}#p7 .icon2{width:6.4rem;padding-top:1.6rem;background:url("../img/icon2.jpg") no-repeat top center;background-size:100%;position:absolute;top:30%;left:50%;margin-left:-3.2rem;color:#fff;font-size:.45rem;line-height:.6rem}#p7 .icon2 span{color:#df002b}#p8{background:#fff;position:relative}#p8 .r1{width:5rem;height:0;position:absolute;top:0;left:50%;margin-left:-2.5rem;background:#df002b;-webkit-transition:height .2s;-moz-transition:height .2s;-ms-transition:height .2s;-o-transition:height .2s;transition:height .2s}#p8 .r2{width:5rem;height:0;position:absolute;bottom:0;left:50%;margin-left:-2.5rem;background:#df002b;-webkit-transition:height .2s;-moz-transition:height .2s;-ms-transition:height .2s;-o-transition:height .2s;transition:height .2s}#p8.s1 .r1,#p8.s1 .r2{height:20%}#p8 .text{width:5rem;height:60%;position:absolute;top:20%;left:50%;margin-left:-2.5rem;background:url('../img/text1.jpg') center center no-repeat;background-size:100%}#p9{background:#000;position:relative;width:100%;height:100%}#p9 .logo1{width:100%;height:1.31rem;background:#000 url('../img/logo1.jpg') center center no-repeat;background-size:auto 100%;position:absolute;z-index:100;top:50%;margin-top:-0.65rem;left:0;-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all .4s;transition:all .4s}#p9 .logo2{width:100%;height:.85rem;background:#000 url('../img/logo2.jpg') center center no-repeat;background-size:auto 100%;position:absolute;z-index:60;top:50%;margin-top:-0.4rem;left:0;-webkit-transition:all .4s;-moz-transition:all .4s;-ms-transition:all .4s;-o-transition:all 04s;transition:all .4s}#p9 .logo3{width:100%;height:.73rem;background:#000 url('../img/logo3.jpg') center center no-repeat;background-size:auto 100%;position:absolute;z-index:10;top:80%;margin-top:-0.37rem;left:0}#p9.s1 .logo1{margin-top:-1.5rem}#p9.s1 .logo2{margin-top:0rem}
+/* css*/
+body {-webkit-tap-highlight-color: transparent;line-height:1.5;background:#ffffff;font-size:12px;font-family: Helvetica,sans-serif,Roboto,HelveticaNeue,Arial,sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,
+form,fieldset,legend,input,button,textarea,p,blockquote,th,td {
+    margin:0;
+    padding:0;
+}
+h1,h2,h3,h4,h5,h6 {font-size:100%;}
+ol,ul{list-style:none;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup {
+    font-style:normal;
+}
+input,button,textarea,select,optgroup,option {
+    font-family:inherit;
+    font-size:inherit;
+    font-style:inherit;
+    font-weight:inherit;
+    *font-size:100%;
+}
+fieldset,img,a img,:link img,:visited img{border:0;}
+a{text-decoration:none;}
+a:hover {text-decoration:underline;}
+:focus {outline:0;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th {text-align:left;}
+sup,sub {font-size:100%;vertical-align:baseline;}
+blockquote,q {quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+.clear,.clearfix:after {clear:both;height:0;overflow:hidden;display:block;}
+.clearfix:after {visibility:hidden;content:".";}
+.clearfix{*zoom:1;}
+
+/*common */
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-container,.swiper-wrapper{
+	height: 100%;
+}
+.page{
+	height: 100%;
+}
+/*page1*/
+#p1{
+	background: #fff;
+	position: relative;
+}
+#p1 .down,.p3-1 .down,.p4-1 .down,.p6-1 .down{
+	width: 1rem;
+	height: 0.8rem;
+	background: url('../img/down1.png');
+	background-size: 100% 100%;
+	position: absolute;
+	bottom: 0.1rem;
+	left: 50%;
+	margin-left: -0.5rem;
+	z-index: 999;
+	-webkit-animation: down 0.5s alternate infinite;
+	-o-animation: down 0.5s alternate infinite;
+	animation: down 0.5s alternate infinite;
+	display: none;
+}
+@keyframes down
+{
+  0%   {bottom:0.1rem;}
+  100% {bottom: 0.2rem;}
+}
+.p1-1{
+	width:6rem;
+	height: 60%;
+	background: #df002b;
+	position: absolute;
+	bottom: 42%;
+	left: 50%;
+	margin-left: -3rem;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.p1-1 .loadingtext{
+	font-size: 0.4rem;
+	color: #fff;
+	position: absolute;
+	top: 90%;
+	text-align: center;
+	width: 100%;
+}
+.p1-1 .loading{
+            width: 0.8rem;
+            height: 0.4rem;
+            margin: 0 auto;
+            margin-top:100px;
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+			margin-left: -0.4rem;
+        }
+.p1-1 .loading span{
+            display: inline-block;
+            width: 0.08rem;
+            height: 100%;
+            background: #fff;
+            -webkit-animation: load 1s ease infinite;
+        }
+        @-webkit-keyframes load{
+            0%,100%{
+                height: 0.4rem;
+                background: #fff;
+            }
+            50%{
+                height: 0.7rem;
+                margin: -0.15rem 0;
+                background: #fff;
+            }
+        }
+       .p1-1 .loading span:nth-child(2){
+            -webkit-animation-delay:0.2s;
+        }
+       .p1-1 .loading span:nth-child(3){
+            -webkit-animation-delay:0.4s;
+        }
+       .p1-1 .loading span:nth-child(4){
+            -webkit-animation-delay:0.6s;
+        }
+       .p1-1 .loading span:nth-child(5){
+            -webkit-animation-delay:0.8s;
+        }
+/*旋转*/
+@keyframes around
+{
+0%   {transform: rotate(0deg);}
+100% {transform: rotate(360deg);}
+}
+
+@-moz-keyframes around /* Firefox */
+{
+0%   {-moz-transform: rotate(0deg);}
+100% {-moz-transform: rotate(360deg);}
+}
+
+@-webkit-keyframes around /* Safari 和 Chrome */
+{
+0% {-webkit-transform: rotateZ(0deg);}
+100% {-webkit-transform: rotateZ(360deg);}
+}
+
+@-o-keyframes around /* Opera */
+{
+0%   {-o-transform: rotate(0deg);}
+100% {-o-transform: rotate(360deg);}
+}
+
+.p1-1.s1{
+	width: 6rem;
+	height: 1%;
+	background: #df002b;
+	position: absolute;
+	bottom: 42%;
+	left: 50%;
+	margin-left: -3rem;
+}
+.p1-1.s2{
+	width: 3rem;
+	height: 1%;
+	background: #df002b;
+	position: absolute;
+	bottom: 42%;
+	left: 50%;
+	margin-left: -3rem;
+}
+.p1-1.s3{
+	width: 3rem;
+	height: 10%;
+	background: #df002b;
+	position: absolute;
+	bottom: 90%;
+	left: 10%;
+	margin-left: 0;
+}
+.p1-1.s4{
+	-webkit-animation: tobig 0.5s forwards;
+	-o-animation: tobig 0.5s forwards;
+	animation: tobig 0.5s forwards;
+}
+@keyframes tobig
+{
+  0%   {width:2%;height: 10%;bottom: 90%;}
+  25%  {width:2%;height: 70%;bottom: 30%;}
+  50%  {width:2%;height: 1%;bottom: 30%;}
+  100% {width:80%;height: 1%;bottom: 30%;}
+}
+.p1-2{
+	font-size: 3rem;
+	line-height: 3rem;
+	font-size: 3rem;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	margin-left: -3rem;
+	font-weight: 700;
+	display: none;
+	text-align: center;
+}
+.p1-2.s1{
+	display: block;
+}
+.p1-2.s2{
+	display: block;
+	top: auto;
+	bottom: 45%;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+}
+.p1-2.s3{
+	display: block;
+	top: auto;
+	bottom: 45%;
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+
+}
+.p1-2.s4{
+	display: block;
+	top: auto;
+	left: 5%;
+	margin-left: 0;
+	bottom: 5%;
+	width: 7rem;
+	font-size: 2.2rem;
+	color: #df002b;
+	line-height: 2.2rem;	
+	text-align: left;
+}
+.p1-2.s5{
+	display: block;
+	top: auto;
+	left: 0;
+	margin-left: 0;
+	bottom: 35%;
+	width: 100%;
+	font-size: 5rem;
+	color: #333;
+	line-height: 5rem;	
+	text-align: center;
+}
+.p1-3{
+	background: #000;
+	height: 100%;
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+.p1-3 .text{
+	height: 10rem;
+	width: 2.5rem;
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -1.25rem;
+	margin-top: -5rem;
+}
+.p1-3.s1{
+	display: block;
+	z-index: 99;
+}
+.p1-3.s2{
+	display: block;
+	z-index: 99;
+}
+.p1-3.s2 .text{
+	height: 9rem;
+	width: 3rem;
+	font-size: 3rem;
+	line-height: 3rem;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -1.5rem;
+	margin-top: -4.5rem;
+}
+.p1-4{
+	background: #000;
+	height: 100%;
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+
+.p1-4 .text2{
+	width: 80%;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #df002b;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+.p1-4 .text2 span{
+	font-size: 1rem;
+	line-height: 1rem;
+	color: #fff;
+}
+.p1-5{
+	background: #fff;
+	height: 100%;
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+.p1-5 .text1{
+	height: 9rem;
+	width: 3rem;
+	font-size: 3rem;
+	line-height: 3rem;
+	color: #df002b;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -1.5rem;
+	margin-top: -4.5rem;
+	font-weight: 700;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.p1-5.s1 .text1{
+	height: 9rem;
+	width: 3rem;
+	font-size: 3rem;
+	line-height: 3rem;
+	color: #df002b;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -1.5rem;
+	margin-top: -4.5rem;
+	font-weight: 700;
+	opacity: 0.2;
+	-webkit-transform: scale(1.2,1.2);
+	-moz-transform: scale(1.2,1.2);
+	-ms-transform: scale(1.2,1.2);
+	-o-transform: scale(1.2,1.2);
+	transform: scale(1.2,1.2);
+}
+.p1-5 .text2{
+	height: 2rem;
+	width: 6rem;
+	font-size: 2rem;
+	line-height: 2rem;
+	color: #df002b;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -3rem;
+	margin-top: -1rem;
+	font-weight: 700;
+	display: none;
+	text-align: center;
+}
+.p1-5.s1 .text2{
+	display: block;
+}
+.p1-6{
+	background: #fff;
+	height: 100%;
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+.p1-6 .r1{
+	width: 5rem;
+	height: 35%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	
+}
+.p1-6 .r1{
+	width: 5rem;
+	height: 35%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-ms-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	transition: height 0.2s;
+}
+.p1-6 .r2{
+	width: 5rem;
+	height: 35%;
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-ms-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	transition: height 0.2s;
+}
+.p1-6 .text{
+	width: 5rem;
+	height: 2.5rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	line-height: 2.5rem;
+	margin-left: -2.5rem;
+	margin-top: -1.25rem;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: 700;
+}
+.p1-6.s1 .r1{
+	width: 5rem;
+	height: 20%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+}
+.p1-6.s1 .r2{
+	width: 5rem;
+	height: 20%;
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+}
+.p1-6.s1 .text{
+	width: 7rem;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 2.8rem;
+    margin-left: -3.5rem;
+    margin-top: -1.5rem;
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 700;
+    color: #df002b;
+}
+.p1-6.s2 .r1{
+	width: 5rem;
+	height: 0%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+}
+.p1-6.s2 .r2{
+	width: 5rem;
+	height: 0%;
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+}
+.p1-6.s2 .text{
+	display: none;
+}
+.p1-7{
+	background: #fff;
+	height: 100%;
+	display: none;
+	position: absolute;
+	width: 100%;
+}
+.p1-7 .text{
+	width: 6rem;
+    position: absolute;
+    height: 3rem;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-top: -1.5rem;
+    margin-left: -3rem;
+    color: #df002b;
+    border-bottom: 0.2rem solid #df002b;
+    font-weight: bolder;
+}
+.p1-7.s1{
+	display: block;
+}
+.p1-7.s2{
+	background: #000;
+}
+.p1-7.s2 .text{
+    color: #fff;
+    border-bottom: 0;
+}
+.p1-7.s3{
+	background: #fff;
+}
+.p1-7.s3 .text{
+    color: #000;
+    border-bottom: 0;
+}
+.p1-7.s4{
+	background: #000;
+}
+.p1-7.s4 .text{
+    color: #fff;
+    border-bottom: 0;
+}
+.p1-7.s5{
+	background: #000;
+}
+.p1-7.s5 .text{
+    color: #df002b;
+    border-bottom: 0;
+}
+/*page2*/
+#p2{
+	background: #fff;
+	overflow: scroll;
+	overflow-x:visible;
+	-webkit-overflow-scrolling: touch;
+	position: relative;
+}
+#p2::-webkit-scrollbar{
+	display: none;
+}
+#p2 .right{
+	width: 0.5rem;
+	height: 0.5rem;
+	background: url('../img/right.png');
+	background-size: 100%;
+	position: absolute;
+	left: 7rem;
+	top: 50%;
+	margin-top: -0.25rem;
+	-webkit-animation: right 0.5s alternate infinite;
+	-o-animation: right 0.5s alternate infinite;
+	animation: right 0.5s alternate infinite;
+}
+#p2 .down{
+	width: 0.5rem;
+	height: 0.5rem;
+	background: url('../img/down2.png');
+	background-size: 100%;
+	position: absolute;
+	right: 3.6rem;
+	bottom: 2%;
+	-webkit-animation: down 0.5s alternate infinite;
+	-o-animation: down 0.5s alternate infinite;
+	animation: down 0.5s alternate infinite;
+}
+@keyframes right
+{
+  0%   {left: 7rem;}
+  100% {left: 6.8rem;}
+}
+.p2-1{
+	width: 45rem;
+	height: 100%;
+	background: url('../img/audi-p2.jpg')no-repeat center center;
+	background-size:95%; 
+	position: relative;
+}
+/*page3*/
+.page3{
+	background: #000;
+	overflow: scroll;
+	position: relative;
+}
+.page3::-webkit-scrollbar{
+	display: none;
+}
+#p3.s1 .photo1{
+	margin-left: -10.8rem;
+}
+#p3.s1 .photo2{
+	margin-left: -3.2rem;
+}
+.p3-1{
+	width: 100%;
+	color: #fff;
+	height: 100%;
+	position: relative;
+}
+.page3 .icon1{
+	width: 1.08rem;
+	height: 1.16rem;
+	background: url('../img/icon1.jpg');
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	z-index: 99;
+}
+.page3 .name{
+	color: #fff;
+	font-size: 1rem;
+	font-style: italic;
+	font-weight: 700;
+	border-bottom: 2px solid #df002b;
+	line-height: 1rem;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: 99;
+}
+.p3-1 .photo1{
+	width: 6.4rem;
+	height: 8rem;
+	background: url('../img/audi-p31.jpg?124');
+	background-size: 100% 100%;
+	margin-top: -0.5rem;
+	position: absolute;
+	top: 2.3rem;
+	left: 50%;
+	margin-left: -3.2rem;
+	-webkit-transition: all 0.3s 1.5s ease-in-out;
+	-moz-transition: all 0.3s 1.5s ease-in-out;
+	-ms-transition: all 0.3s 1.5s ease-in-out;
+	-o-transition: all 0.3s 1.5s ease-in-out;
+	transition: all 0.3s 1.5s ease-in-out;
+}
+.p3-1 .photo2{
+	width: 6.7rem;
+	height: 5.43rem;
+	background: url('../img/audi-p32.jpg');
+	background-size: 100% 100%;
+	margin-top: -0.5rem;
+	position: absolute;
+	bottom: 30%;
+	left: 50%;
+	margin-left: 4.5rem;
+	-webkit-transition: all 0.3s 1.5s ease-in-out;
+	-moz-transition: all 0.3s 1.5s ease-in-out;
+	-ms-transition: all 0.3s 1.5s ease-in-out;
+	-o-transition: all 0.3s 1.5s ease-in-out;
+	transition: all 0.3s 1.5s ease-in-out;
+}
+.page3 .bar1{
+	width: 3.74rem;
+	height: 0.87rem;
+	background: #df002b;
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+	margin-left: -3.2rem;
+	padding: 0.02rem 0.05rem;
+}
+.page3 .bar1 .n{
+	font-size: 0.4rem;
+	line-height: 0.48rem;
+	color: #fff;
+}
+.page3 .bar1 .d{
+	font-size: 0.28rem;
+	line-height: 0.35rem;
+	color: #fff;
+}
+.page3 .text{
+	position: absolute;
+	top:70%;
+	left: 50%;
+	margin-left: -3.2rem;
+	padding: 0.05rem;
+	font-size: 0.3rem;
+	line-height: 0.4rem;
+	color: #fff;
+}
+#p3 .text{
+	top: 70%;
+}
+#p3 .bar1{
+	bottom: 30%;
+}
+.p4-1,.p5-1,.p6-1{
+	width: 100%;
+	color: #fff;
+	height: 100%;
+	position: relative;
+}
+#p4 .photo1{
+	width: 7.5rem;
+	height: 4.22rem;
+	background: url('../img/audi-p33.jpg?211');
+	background-size: 100% 100%;
+	margin-top: -0.5rem;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	margin-left: 0;
+	display: block;
+}
+#p4 .bar1{
+	width: 3.74rem;
+	height: 0.87rem;
+	background: #df002b;
+	position: absolute;
+	bottom: 40%;
+	left: 50%;
+	margin-left: -3.2rem;
+	padding: 0.02rem 0.05rem;
+}
+#p4 .text{
+	top: 65%;
+}
+#p5 .photo1{
+	width: 6.4rem;
+	height: 3.8rem;
+	background: url('../img/audi-p34.jpg?124244');
+	background-size: 100% 100%;
+	margin-top: -0.5rem;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	margin-left: -3.2rem;
+	display: block;
+}
+#p6 .photo1{
+	width: 6.48rem;
+	height: 7.53rem;
+	background: url('../img/audi-p35.jpg?123123');
+	background-size: 100% 100%;
+	margin-top: -0.5rem;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -3.2rem;
+	display: block;
+}
+#p6 .bar1{
+	bottom: 25%;
+}
+#p6 .text{
+	top: 75%;
+}
+#p7{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #000;
+}
+
+#p7 .icon2{
+	width: 6.4rem;
+	padding-top: 1.6rem;
+	background: url("../img/icon2.jpg") no-repeat top center;
+	background-size: 100%;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -3.2rem;
+	color: #fff;
+	font-size: 0.45rem;
+	line-height: 0.6rem;
+}
+#p7 .icon2 span{
+	color: #df002b;
+}
+#p8{
+	background: #fff;
+	position: relative;
+}
+#p8 .r1{
+	width: 5rem;
+	height: 0%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-ms-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	transition: height 0.2s;
+}
+#p8 .r2{
+	width: 5rem;
+	height: 0%;
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-ms-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	transition: height 0.2s;
+}
+#p8.s1 .r1,#p8.s1 .r2{
+	height: 20%
+}
+#p8 .text{
+	width: 5rem;
+	height: 60%;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: url('../img/text1.jpg') center center no-repeat;
+	background-size: 100%;
+}
+#p9{
+	background: #000;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	
+}
+#p9 .logo1{
+	width: 100%;
+	height: 1.31rem;
+	background: #000 url('../img/logo1.jpg') center center no-repeat;
+	background-size: auto 100%;
+	position: absolute;
+	z-index: 100;
+	top: 50%;
+	margin-top: -0.65rem;
+	left: 0;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+#p9 .logo2{
+	width: 100%;
+	height: 0.85rem;
+	background: #000 url('../img/logo2.jpg') center center no-repeat;
+	background-size: auto 100%;
+	position: absolute;
+	z-index: 60;
+	top: 50%;
+	margin-top: -0.4rem;
+	left: 0;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 04s;
+	transition: all 0.4s;
+}
+#p9 .logo3{
+	width: 100%;
+	height: 0.73rem;
+	background: #000 url('../img/logo3.jpg') center center no-repeat;
+	background-size: auto 100%;
+	position: absolute;
+	z-index: 10;
+	top: 80%;
+	margin-top: -0.37rem;
+	left: 0;
+}
+#p9.s1 .logo1{
+	margin-top: -1.5rem;
+}
+#p9.s1 .logo2{
+	margin-top: 0rem;
+}
