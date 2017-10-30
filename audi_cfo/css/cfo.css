@@ -878,3 +878,128 @@ html,body{
 #p9.s1 .logo2{
 	margin-top: 0rem;
 }
+#p10{
+	background: #fff url(../img/bg1.jpg) center 30% no-repeat;
+    background-size: 5.06rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#p10 .rect{
+	width: 5rem;
+	height: 0%;
+	position: absolute;
+	top:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-ms-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	transition: height 0.2s;
+}
+#p10.s1 .rect{
+	height: 10%
+}
+#p10 .text{
+	width: 100%;
+
+}
+#p10 .t1{
+	position: absolute;
+	top: 60%;
+}
+#p10 .t2{
+	position: absolute;
+	top: 75%;
+}
+#p10 .text .title{
+	height: 0.4rem;
+	background: #df002b;
+}
+#p10 .text .tt{
+	width: 5rem;
+	margin:0 auto;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	font-size: 0.26rem;
+	color: #fff;
+}
+#p10 .text .content{
+	width: 5rem;
+    line-height: 0.4rem;
+    margin: 0.1rem auto;
+    font-size: 0.26rem;
+}
+#p11{
+	/*background: #fff url(../img/bg1.jpg) center 30% no-repeat;*/
+    /*background-size: 5.06rem;*/
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#p11 .rect{
+	width: 5rem;
+	height: 0%;
+	position: absolute;
+	bottom:0;
+	left: 50%;
+	margin-left: -2.5rem;
+	background: #df002b;
+	-webkit-transition: height 0.2s;
+	-moz-transition: height 0.2s;
+	-ms-transition: height 0.2s;
+	-o-transition: height 0.2s;
+	transition: height 0.2s;
+}
+#p11.s1 .rect{
+	height: 40%
+}
+#p11 .text{
+	width: 100%;
+
+}
+#p11 .t1{
+	position: absolute;
+	top: 5%;
+}
+#p11 .t2{
+	position: absolute;
+	top: 25%;
+}
+#p11 .text .title{
+	height: 0.4rem;
+	background: #df002b;
+}
+#p11 .text .tt{
+	width: 5rem;
+	margin:0 auto;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	font-size: 0.26rem;
+	color: #fff;
+}
+#p11 .text .content{
+	width: 5rem;
+    line-height: 0.4rem;
+    margin: 0.1rem auto;
+    font-size: 0.26rem;
+}
+#p12{
+	background: #000 url(../img/photo.jpg) center 85% no-repeat;
+    background-size: 5.6rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#p12 .text{
+	width: 5.6rem;
+	margin: 0.4rem auto;
+	font-size: 0.26rem;
+	color: #fff;
+}
+#p12 .text .red{
+	color: #df002b;
+}

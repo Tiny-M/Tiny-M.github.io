@@ -18,11 +18,21 @@ img.onload = function(){
 	         }else{
 	            $('#p8').removeClass('s1')
 	         } 
-	         if (swiper.activeIndex == 8) {
-	            $('#p9').addClass('s1')
-	         }else{
-	            $('#p9').removeClass('s1')
-	         } 
+             if (swiper.activeIndex == 8) {
+                $('#p10').addClass('s1')
+             }else{
+                $('#p10').removeClass('s1')
+             } 
+             if (swiper.activeIndex == 9) {
+                $('#p11').addClass('s1')
+             }else{
+                $('#p11').removeClass('s1')
+             } 
+             if (swiper.activeIndex == 11) {
+                $('#p9').addClass('s1')
+             }else{
+                $('#p9').removeClass('s1')
+             } 
 	        }
 	      }) 
 
