@@ -2,7 +2,18 @@
 var href = location.href;
 var a = new Audio()
 if(typeof a.oncanplay == "undefined"){
-    
+    $(".loading").hide();
+        $(".loadingtext").html('- 开始 -').addClass('play');
+        $(".p1").on('click',function(){
+            if($(this).hasClass("start")){
+                $(".p1").removeClass("start")
+                $(".loadingtext").hide();
+                $("#audio1")[0].play();
+                $('#p1').find(".text").show();
+                animate.run();    
+            }
+             
+        })
 }else{
     a.src = href.substr(0,href.lastIndexOf('/'))+'/img/cfo2_mixdown.mp3';
     a.oncanplay = function(){
