@@ -496,20 +496,26 @@ html,body{
 	opacity: 1;
 	text-indent: 0rem;
 }
-
 .p2{
-	background: url("../img/text1.png") 10% 10% no-repeat;
-	background-size:6.35rem 9.24rem;
 	position: relative;
+	width: 7.5rem;
+	height: 100%;
+	overflow-x:scroll;
 }
-.p2 .icon{
-	width: 2.97rem;
-	height: 1.67rem;
-	background: url("../img/icon1.png") no-repeat;
-	background-size: 100%;
-	position: absolute;
-	right: 10%;
-	bottom: 10%;
+.p2 .box{
+	width: 7.5rem;
+	height: 100%;
+	overflow-x:scroll;
+}
+.p2 img{
+	background: -webkit-linear-gradient(45deg,rgba(0,0,0,0),rgba(255,255,255,1));
+	height: 100%;
+}
+.p2 .down{
+	left: auto;
+	right: 50%;
+	margin-left:0;
+	margin-right: -0.5rem;
 }
 .p3{
 	position: relative;

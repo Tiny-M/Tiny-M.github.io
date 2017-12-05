@@ -1,9 +1,9 @@
 // 滑动初始化
 
 var href = location.href;
-var a = new Audio()
-
-if(!a.oncanplay){
+var img = new Image()
+img.src = href.substr(0,href.lastIndexOf('/'))+'/img/bg.png';
+img.onload = function(){
     $(".loading").hide();
         $(".loadingtext").html('- 开始 -').addClass('play');
         $(".p1").on('click',function(){
@@ -16,23 +16,8 @@ if(!a.oncanplay){
             }
              
         })
-}else{
-    a.src = href.substr(0,href.lastIndexOf('/'))+'/img/cfo2_mixdown.mp3';
-    a.oncanplay = function(){
-        $(".loading").hide();
-        $(".loadingtext").html('- 开始 -').addClass('play');
-        $(".p1").on('click',function(){
-            if($(this).hasClass("start")){
-                $(".p1").removeClass("start")
-                $(".loadingtext").hide();
-                $("#audio1")[0].play();
-                $('#p1').find(".text").show();
-                animate.run();    
-            }
-             
-        })
-    }
 }
+    
 
  // a.src = href.substr(0,href.lastIndexOf('/'))+'/img/cfo2_mixdown.mp3';
 
@@ -42,7 +27,14 @@ var func = {
         $(".down").show()
         var mySwiper = new Swiper ('.swiper-container', {
             direction: 'vertical',
+            allowSwipeToPrev : false,
             onSlideChangeEnd: function(swiper){
+                if (swiper.activeIndex == 0) {
+                    this.allowSwipeToPrev = false
+                 }else{
+                    this.allowSwipeToPrev = true
+                 }
+                
                 if (swiper.activeIndex == 1) {
                 $('.bg1').addClass('s1')
                  }else{
@@ -147,6 +139,7 @@ var animate = {
         animate.obj1.removeClass("s1").addClass("s2");
         animate.obj1.find(".text").removeClass("s6").html("梦想")
         animate.obj1.find(".white1").hide()
+        
         func.swiper();
     }
 } 
