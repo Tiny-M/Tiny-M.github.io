@@ -495,17 +495,17 @@ html,body{
 	position: relative;
 	width: 7.5rem;
 	height: 100%;
-	overflow-x:scroll;
-	overflow-x:visible;
-	-webkit-overflow-scrolling: touch;
+	
 }
-.p2::-webkit-scrollbar{
+.p2 .box::-webkit-scrollbar{
 	display: none;
 }
 .p2 .box{
 	width: 7.5rem;
 	height: 100%;
 	overflow-x:scroll;
+	overflow-x:visible;
+	-webkit-overflow-scrolling: touch;
 }
 .p2 img{
 	background:rgba(255,255,255,0.2);
