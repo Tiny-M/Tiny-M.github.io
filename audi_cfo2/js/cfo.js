@@ -2,8 +2,11 @@
 
 var href = location.href;
 var img = new Image()
-img.src = href.substr(0,href.lastIndexOf('/'))+'/img/bg.png';
+var src = href.substr(0,href.lastIndexOf('/'))+'/img/bg.png';
+img.src = src;
 img.onload = function(){
+
+    $(".people").attr("src",src);
     $(".loading").hide();
         $(".loadingtext").html('- 开始 -').addClass('play');
         $(".p1").on('click',function(){
