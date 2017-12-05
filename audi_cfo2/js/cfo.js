@@ -1,7 +1,9 @@
 // 滑动初始化
+
 var href = location.href;
 var a = new Audio()
-if(typeof a.oncanplay == "undefined"){
+
+if(!a.oncanplay){
     $(".loading").hide();
         $(".loadingtext").html('- 开始 -').addClass('play');
         $(".p1").on('click',function(){
@@ -32,7 +34,7 @@ if(typeof a.oncanplay == "undefined"){
     }
 }
 
- a.src = href.substr(0,href.lastIndexOf('/'))+'/img/cfo2_mixdown.mp3';
+ // a.src = href.substr(0,href.lastIndexOf('/'))+'/img/cfo2_mixdown.mp3';
 
 
 var func = {
