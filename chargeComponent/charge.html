@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style>
+		*{
+			padding: 0;margin: 0;
+		}
+		.div1{
+			width: 500px;
+		}
+		.div1 .item{
+			width: 500px;
+			height: 500px;
+			background: #333;
+			margin: 1px;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: #369;
+		}
+		.charge-cpm .item{
+			widows: 500px;
+			height: 500px;
+			background: #369;
+		}
+	.swiper-container{
+		width: 1000px;
+		height: 500px;
+	}
+	</style>
+	<link rel="stylesheet" href="swiper.css" />
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<!-- swiper 展现付费 CPM -->
+	<div class="swiper-container">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide charge-cpm-item" charge-item="111">slider1</div>
+	    <div class="swiper-slide charge-cpm-item" charge-item="122">slider2</div>
+	    <div class="swiper-slide charge-cpm-item" charge-item="133">slider3</div>
+	  </div>
+	</div>
+	<!-- 点击付费 CPA -->
+	<div class="div1 charge-cpa">
+		<div class="item charge-cpa-item" charge-item="123">
+			<div class="box">hahah</div>
+		</div>
+		<div class="item charge-cpa-item" charge-item="1"></div>
+		<div class="item charge-cpa-item" charge-item="2"></div>
+		<div class="item charge-cpa-item" charge-item="3"></div>
+		<div class="item charge-cpa-item" charge-item="4"></div>
+	</div>
+	<!-- 展现付费 CPM -->
+	<div class="charge-cpm">
+		<div class="item charge-cpm-item" charge-item="123">
+		</div>
+		<div class="item charge-cpm-item" charge-item="12">
+		</div>
+		<div class="item charge-cpm-item" charge-item="1">
+		</div>
+		<div class="item charge-cpm-item" charge-item="1">
+		</div>
+		<div class="item charge-cpm-item" charge-item="1">
+		</div>
+		<div class="item charge-cpm-item" charge-item="1">
+		</div>
+		<div class="item charge-cpm-item" charge-item="1">
+		</div>
+	</div>
+	
+
+<script src="swiper.js"></script>
+<script src="charge.js"></script>
+<script>
+	var cpa = new charge({
+			wrap:".charge-cpa",
+			type:"cpa",
+			request:function(data){
+				console.log(data)
+			}
+		});
+	var cpm = new charge({
+			wrap:".charge-cpm",
+			type:"cpm",
+			request:function(data){
+				console.log(data)
+			}
+		});
+	var cpmSwiper = new charge({
+			wrap:".swiper-container",
+			type:"cpm-swiper",
+			request:function(data){
+				console.log(data)
+			},
+			swiper:{container:".swiper-container",option:{}}
+		});
+</script>
+</body>
+</html>
