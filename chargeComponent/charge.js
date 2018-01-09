@@ -5,7 +5,7 @@
 		request:function(data){
 			//触发付费函数，可用来添加http请求代码
 		},
-		swiper:{container:".swiper-container",option:{}}   //同swiper组件的使用 container为作用对象选择器，option为swiper的创建属性
+		swiper:{container:".swiper-container",slider:".swiper-slide",option:{}}   //同swiper组件的使用 container为作用对象选择器，option为swiper的创建属性
 	*/
 
 	// 构造函数
@@ -66,7 +66,7 @@
 		cpmSwiper:function(){
 			var t = this;
 			var el_parent = document.querySelector(this.wrap)
-			var el_slide = el_parent.querySelectorAll(".swiper-slide")
+			var el_slide = el_parent.querySelectorAll(t.swiper.slider)
 			var data = {}
 			// 为滑动结束添加方法
 			t.swiper.option.onSlideChangeEnd = function(swiper){
@@ -106,10 +106,10 @@
 			var els = el.querySelectorAll(".charge-cpm-item")
 			var data = {};
 			for(var i = 0;i < els.length ; i++){
-				if((contTop > els[i].offsetTop - contHeight + (els[i].offsetHeight*t.modulus.showRatio))&&
-				(contTop < els[i].offsetTop + (els[i].offsetHeight*(1-t.modulus.showRatio)))&&
-				(contLeft > els[i].offsetLeft - contWidth + (els[i].offsetWidth*t.modulus.showRatio))&&
-				(contLeft < els[i].offsetLeft + (els[i].offsetWidth*(1-t.modulus.showRatio)))
+				if((contTop > this.offsetTop(els[i]) - contHeight + (els[i].offsetHeight*t.modulus.showRatio))&&
+				(contTop < this.offsetTop(els[i]) + (els[i].offsetHeight*(1-t.modulus.showRatio)))&&
+				(contLeft > this.offsetLeft(els[i]) - contWidth + (els[i].offsetWidth*t.modulus.showRatio))&&
+				(contLeft < this.offsetLeft(els[i]) + (els[i].offsetWidth*(1-t.modulus.showRatio)))
 				){
 					data.type = t.type
 					data.id = els[i].getAttribute("charge-item")
@@ -141,6 +141,23 @@
 			}else{
 				return true;
 			}
+		},
+		offsetTop:function(el){
+			var top = el.offsetTop;
+			while(el.parentNode.tagName != "BODY" && (el.style.position == "absolote" || el.style.position == "relative")){
+				top = top + el.offsetTop
+				el = el.parentNode
+			}
+			// console.log(top)
+			return top
+		},
+		offsetLeft:function(el){
+			var left = el.offsetLeft;
+			while(el.parentNode.tagName != "BODY" && (el.style.position == "absolote" || el.style.position == "relative")){
+				left = left + el.offsetTop
+				el = el.parentNode
+			}
+			return left
 		}
 	}
 
