@@ -58,6 +58,7 @@
 		cpm : function(){
 			var t = this
 			var el_parent = document.querySelector(this.wrap)
+			t.onShow(el_parent)
 			window.addEventListener("scroll",function(){
 				t.onShow(el_parent)
 			})
@@ -68,6 +69,13 @@
 			var el_parent = document.querySelector(this.wrap)
 			var el_slide = el_parent.querySelectorAll(t.swiper.slider)
 			var data = {}
+
+			//第一屏展现 
+			t.onShow(el_parent)
+			window.addEventListener("scroll",function(){
+				t.onShow(el_parent)
+			})
+
 			// 为滑动结束添加方法
 			t.swiper.option.onSlideChangeEnd = function(swiper){
 				if(el_slide[swiper.activeIndex].className.indexOf("charge-cpm-item")>0){
@@ -93,7 +101,9 @@
 				
 			}
 			// 创建swiper对象
-			new Swiper(t.swiper.container,t.swiper.option)
+			if(Swiper){
+				new Swiper(t.swiper.container,t.swiper.option)
+			}			
 		},
 		// 计算展现付费的方法
 		onShow:function(el){
@@ -105,12 +115,14 @@
 
 			var els = el.querySelectorAll(".charge-cpm-item")
 			var data = {};
+
 			for(var i = 0;i < els.length ; i++){
 				if((contTop > this.offsetTop(els[i]) - contHeight + (els[i].offsetHeight*t.modulus.showRatio))&&
 				(contTop < this.offsetTop(els[i]) + (els[i].offsetHeight*(1-t.modulus.showRatio)))&&
 				(contLeft > this.offsetLeft(els[i]) - contWidth + (els[i].offsetWidth*t.modulus.showRatio))&&
 				(contLeft < this.offsetLeft(els[i]) + (els[i].offsetWidth*(1-t.modulus.showRatio)))
 				){
+
 					data.type = t.type
 					data.id = els[i].getAttribute("charge-item")
 
@@ -144,16 +156,16 @@
 		},
 		offsetTop:function(el){
 			var top = el.offsetTop;
-			while(el.parentNode.tagName != "BODY" && (el.style.position == "absolote" || el.style.position == "relative")){
+			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
 				top = top + el.offsetTop
 				el = el.parentNode
 			}
-			// console.log(top)
+
 			return top
 		},
 		offsetLeft:function(el){
 			var left = el.offsetLeft;
-			while(el.parentNode.tagName != "BODY" && (el.style.position == "absolote" || el.style.position == "relative")){
+			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
 				left = left + el.offsetTop
 				el = el.parentNode
 			}
