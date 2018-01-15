@@ -71,30 +71,35 @@
 			var data = {}
 
 			//第一屏展现 
-			t.onShow(el_parent)
+			t.onShow(el_parent,"swiper")
 			window.addEventListener("scroll",function(){
-				t.onShow(el_parent)
+				t.onShow(el_parent,"swiper")
 			})
 
 			// 为滑动结束添加方法
 			t.swiper.option.onSlideChangeEnd = function(swiper){
 				if(el_slide[swiper.activeIndex].className.indexOf("charge-cpm-item")>0){
-					data.type = t.type
-					data.id = el_slide[swiper.activeIndex].getAttribute("charge-item")
-
-					if(!t.ls_read(t.date,data.id)){
-						t.request(data)
-						t.ls_write(t.date,data.id)
-					}
-				}else{
-					items = el_slide[swiper.activeIndex].querySelectorAll(".charge-cpm-item");
-					for(var i = 0;i < items.length ; i++){
+					if(t.isShow(el_slide[swiper.activeIndex])){
 						data.type = t.type
-						data.id = items[i].getAttribute("charge-item")
+						data.id = el_slide[swiper.activeIndex].getAttribute("charge-item")
 
 						if(!t.ls_read(t.date,data.id)){
 							t.request(data)
 							t.ls_write(t.date,data.id)
+						}
+					}
+					
+				}else{
+					items = el_slide[swiper.activeIndex].querySelectorAll(".charge-cpm-item");
+					for(var i = 0;i < items.length ; i++){
+						if(t.isShow(items[i])){
+							data.type = t.type
+							data.id = items[i].getAttribute("charge-item")
+
+							if(!t.ls_read(t.date,data.id)){
+								t.request(data)
+								t.ls_write(t.date,data.id)
+							}
 						}
 					}
 				}
@@ -106,21 +111,25 @@
 			}			
 		},
 		// 计算展现付费的方法
-		onShow:function(el){
+		onShow:function(el,param){
 			var t = this,
+				els,
 				contHeight = window.innerHeight,
 				contWidth = window.innerWidth,
 				contTop = window.scrollY,
 				contLeft = window.scrollX;
 
-			var els = el.querySelectorAll(".charge-cpm-item")
+			if(param == "swiper"){
+				els = el.querySelectorAll(".charge-cpm-item.swiper-slide-active")
+			}else{
+				els = el.querySelectorAll(".charge-cpm-item")
+			}
+
 			var data = {};
 
 			for(var i = 0;i < els.length ; i++){
 				if((contTop > this.offsetTop(els[i]) - contHeight + (els[i].offsetHeight*t.modulus.showRatio))&&
-				(contTop < this.offsetTop(els[i]) + (els[i].offsetHeight*(1-t.modulus.showRatio)))&&
-				(contLeft > this.offsetLeft(els[i]) - contWidth + (els[i].offsetWidth*t.modulus.showRatio))&&
-				(contLeft < this.offsetLeft(els[i]) + (els[i].offsetWidth*(1-t.modulus.showRatio)))
+				(contTop < this.offsetTop(els[i]) + (els[i].offsetHeight*(1-t.modulus.showRatio)))
 				){
 
 					data.type = t.type
@@ -131,6 +140,21 @@
 						this.ls_write(this.date,data.id)
 					}
 				}
+			}
+		},
+		isShow:function(el){
+			var t = this,
+				contHeight = window.innerHeight,
+				contWidth = window.innerWidth,
+				contTop = window.scrollY,
+				contLeft = window.scrollX;
+
+			if((contTop > this.offsetTop(el) - contHeight + (el.offsetHeight*t.modulus.showRatio))&&
+			(contTop < this.offsetTop(el) + (el.offsetHeight*(1-t.modulus.showRatio)))
+			){
+				return true;
+			}else{
+				return false;
 			}
 		},
 		// 将展现时间和id写入本地存储
@@ -156,18 +180,18 @@
 		},
 		offsetTop:function(el){
 			var top = el.offsetTop;
-			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
-				top = top + el.offsetTop
-				el = el.parentNode
-			}
 
+			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
+				el = el.parentNode
+				top = top + el.offsetTop
+			}
 			return top
 		},
 		offsetLeft:function(el){
 			var left = el.offsetLeft;
 			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
-				left = left + el.offsetTop
 				el = el.parentNode
+				left = left + el.offsetLeft
 			}
 			return left
 		}
