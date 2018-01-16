@@ -30,8 +30,10 @@
 	// charge原型
 	charge.prototype = {
 		modulus:{
-			cpaClassName : "charge-cpa",
-			showRatio : 0.3
+			showRatio : 0.3,
+			swiperParam:{
+				autoplay:3000
+			}
 		},
 		// 点击付费
 		cpa : function(){
@@ -66,49 +68,57 @@
 		// 滑动付费
 		cpmSwiper:function(){
 			var t = this;
-			var el_parent = document.querySelector(this.wrap)
-			var el_slide = el_parent.querySelectorAll(t.swiper.slider)
-			var data = {}
-
-			//第一屏展现 
-			t.onShow(el_parent,"swiper")
-			window.addEventListener("scroll",function(){
-				t.onShow(el_parent,"swiper")
-			})
-
-			// 为滑动结束添加方法
-			t.swiper.option.onSlideChangeEnd = function(swiper){
-				if(el_slide[swiper.activeIndex].className.indexOf("charge-cpm-item")>0){
-					if(t.isShow(el_slide[swiper.activeIndex])){
-						data.type = t.type
-						data.id = el_slide[swiper.activeIndex].getAttribute("charge-item")
-
-						if(!t.ls_read(t.date,data.id)){
-							t.request(data)
-							t.ls_write(t.date,data.id)
-						}
-					}
+			var el_parent = document.querySelectorAll(this.wrap)
+			for(var i = 0;i < el_parent.length;i++){
+				(function(i){
+					var el_slide = el_parent[i].querySelectorAll(".swiper-slide")
+					var data = {}
+					var param = t.modulus.swiperParam
 					
-				}else{
-					items = el_slide[swiper.activeIndex].querySelectorAll(".charge-cpm-item");
-					for(var i = 0;i < items.length ; i++){
-						if(t.isShow(items[i])){
-							data.type = t.type
-							data.id = items[i].getAttribute("charge-item")
+					// 为滑动结束添加方法
+					param.onSlideChangeEnd = function(swiper){
+						if(swiper.slides[swiper.activeIndex].className.indexOf("charge-swiper-item")>0){
+							
+							if(t.isShow(swiper.slides[swiper.activeIndex])){
 
-							if(!t.ls_read(t.date,data.id)){
-								t.request(data)
-								t.ls_write(t.date,data.id)
+								data.type = t.type
+								data.id = swiper.slides[swiper.activeIndex].getAttribute("charge-item")
+
+								if(!t.ls_read(t.date,data.id)){
+									t.request(data)
+									t.ls_write(t.date,data.id)
+								}
+							}
+							
+						}else{
+							items = swiper.slides[swiper.activeIndex].querySelectorAll(".charge-swiper-item");
+							for(var i = 0;i < items.length ; i++){
+								if(t.isShow(items[i])){
+									data.type = t.type
+									data.id = items[i].getAttribute("charge-item")
+
+									if(!t.ls_read(t.date,data.id)){
+										t.request(data)
+										t.ls_write(t.date,data.id)
+									}
+								}
 							}
 						}
+						
 					}
-				}
-				
+					// 创建swiper对象
+					if(Swiper){
+						console.log(param)
+						new Swiper(el_parent[i],param)
+						//第一屏展现 
+						t.onShow(el_parent[i],"swiper")
+						window.addEventListener("scroll",function(){
+							t.onShow(el_parent[i],"swiper")
+						})
+					}	
+				})(i)
 			}
-			// 创建swiper对象
-			if(Swiper){
-				new Swiper(t.swiper.container,t.swiper.option)
-			}			
+					
 		},
 		// 计算展现付费的方法
 		onShow:function(el,param){
@@ -120,7 +130,7 @@
 				contLeft = window.scrollX;
 
 			if(param == "swiper"){
-				els = el.querySelectorAll(".charge-cpm-item.swiper-slide-active")
+				els = el.querySelectorAll(".charge-swiper-item.swiper-slide-active")
 			}else{
 				els = el.querySelectorAll(".charge-cpm-item")
 			}
@@ -131,7 +141,6 @@
 				if((contTop > this.offsetTop(els[i]) - contHeight + (els[i].offsetHeight*t.modulus.showRatio))&&
 				(contTop < this.offsetTop(els[i]) + (els[i].offsetHeight*(1-t.modulus.showRatio)))
 				){
-
 					data.type = t.type
 					data.id = els[i].getAttribute("charge-item")
 
@@ -148,7 +157,6 @@
 				contWidth = window.innerWidth,
 				contTop = window.scrollY,
 				contLeft = window.scrollX;
-
 			if((contTop > this.offsetTop(el) - contHeight + (el.offsetHeight*t.modulus.showRatio))&&
 			(contTop < this.offsetTop(el) + (el.offsetHeight*(1-t.modulus.showRatio)))
 			){
@@ -159,7 +167,7 @@
 		},
 		// 将展现时间和id写入本地存储
 		ls_write:function(date,id){
-			var datastr = date+"@"+id+";";
+			var datastr = date+"@"+this.type+"@"+id+";";
 
 			// 若本地存储中没有chargeLS对象或时间超时，写入新的数据
 			if(!localStorage.chargeLS||localStorage.chargeLS.indexOf(date)<0){
@@ -171,7 +179,7 @@
 		},
 		// 读本地存储，判断是否今日已展示过
 		ls_read:function(date,id){
-			var datastr = date+"@"+id+";";
+			var datastr = date+"@"+this.type+"@"+id+";";
 			if(!localStorage.chargeLS||localStorage.chargeLS.indexOf(datastr)<0){
 				return false;
 			}else{
@@ -181,7 +189,7 @@
 		offsetTop:function(el){
 			var top = el.offsetTop;
 
-			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
+			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el.parentNode).position == "absolote" || getComputedStyle(el.parentNode).position == "relative")){
 				el = el.parentNode
 				top = top + el.offsetTop
 			}
@@ -189,7 +197,7 @@
 		},
 		offsetLeft:function(el){
 			var left = el.offsetLeft;
-			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el).position == "absolote" || getComputedStyle(el).position == "relative")){
+			while(el.parentNode.tagName != "BODY" && (getComputedStyle(el.parentNode).position == "absolote" || getComputedStyle(el.parentNode).position == "relative")){
 				el = el.parentNode
 				left = left + el.offsetLeft
 			}
